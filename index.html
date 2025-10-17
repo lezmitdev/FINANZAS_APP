@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Stitch Design</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&amp;display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#11a4d4",
+                        "background-light": "#f6f8f8",
+                        "background-dark": "#101d22",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark font-display">
+    <div class="flex flex-col min-h-screen">
+        <header class="flex-shrink-0 px-4 pt-10 pb-6 text-center">
+            <h1 class="text-3xl font-bold text-slate-800 dark:text-white">Iniciar Sesión</h1>
+        </header>
+        <main class="flex-grow flex flex-col justify-center px-6 sm:px-8">
+            <div class="w-full max-w-sm mx-auto space-y-6">
+                <div class="space-y-4">
+                    <div>
+                        <label class="sr-only" for="email">Correo electrónico</label>
+                        <input
+                            class="w-full h-14 px-4 bg-slate-100 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700 rounded-lg text-slate-800 dark:text-white placeholder-slate-400 dark:placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-primary"
+                            id="email" placeholder="Correo electrónico" type="email" />
+                    </div>
+                    <div>
+                        <label class="sr-only" for="password">Contraseña</label>
+                        <input
+                            class="w-full h-14 px-4 bg-slate-100 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700 rounded-lg text-slate-800 dark:text-white placeholder-slate-400 dark:placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-primary"
+                            id="password" placeholder="Contraseña" type="password" />
+                    </div>
+                    <div>
+                        <label class="sr-only" for="security-code">Código de seguridad (opcional)</label>
+                        <input
+                            class="w-full h-14 px-4 bg-slate-100 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700 rounded-lg text-slate-800 dark:text-white placeholder-slate-400 dark:placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-primary"
+                            id="security-code" placeholder="Código de seguridad (opcional)" type="text" />
+                    </div>
+                </div>
+                <button
+                    class="w-full h-14 bg-primary text-white font-bold rounded-lg hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-background-light dark:focus:ring-offset-background-dark focus:ring-primary transition-colors">
+                    <a href="principal.html">Iniciar Sesión</a>
+                </button>
+            </div>
+        </main>
+        <footer class="flex-shrink-0 py-8 text-center">
+            <a class="text-sm text-primary hover:underline" href="#">¿Olvidaste tu contraseña?</a>
+        </footer>
+    </div>
+
+</body>
+
+</html>

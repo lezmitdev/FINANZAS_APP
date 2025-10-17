@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+        <title>Stitch Design</title>
+        <link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+        <link as="style" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Manrope:wght@400;500;700;800&amp;family=Noto+Sans:wght@400;500;700;900" onload="this.rel='stylesheet'" rel="stylesheet"/>
+        <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+        <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+            extend: {
+                colors: {
+                primary: "#11a4d4",
+                "background-light": "#f6f8f8",
+                "background-dark": "#101d22",
+                'ring-gastos': '#ef4444', // Red for Gastos
+                'ring-ahorros': '#22c55e', // Green for Ahorros
+                'ring-ingresos': '#facc15', // Yellow for Ingresos
+                },
+                fontFamily: {
+                display: ["Manrope"],
+                },
+                borderRadius: {
+                DEFAULT: "0.25rem",
+                lg: "0.5rem",
+                xl: "0.75rem",
+                full: "9999px",
+                },
+            },
+            },
+        };
+        </script>
+        <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+        <style>
+            body {
+            min-height: max(884px, 100dvh);
+            }
+        </style>
+        <style>
+            body {
+            min-height: max(884px, 100dvh);
+            }
+        </style>
+        <style>
+            body {
+            min-height: max(884px, 100dvh);
+            }
+        </style>
+    </head>
+<body class="bg-background-light dark:bg-background-dark font-display">
+    <div class="relative flex h-auto min-h-screen w-full flex-col justify-between overflow-x-hidden">
+        <div class="flex-grow">
+            <header class="p-4">
+                <div class="flex items-center justify-between mb-4">
+                    <button class="text-gray-800 dark:text-gray-200">
+                        <span class="material-symbols-outlined text-3xl"> menu </span>
+                    </button>
+                    <h1 class="text-xl font-bold text-gray-900 dark:text-white">FinanzApp</h1>
+                    <div class="w-8"></div>
+                </div>
+                <div class="bg-gray-100 dark:bg-gray-800 rounded-xl p-4 shadow-inner">
+                    <div class="flex items-center justify-between mb-3">
+                        <div class="text-lg font-semibold text-gray-900 dark:text-white">Nivel Financiero: Aventurero
+                        </div>
+                        <div class="flex items-center text-primary font-bold">
+                            <span>75%</span>
+                            <span class="material-symbols-outlined text-xl ml-1"> trending_up </span>
+                        </div>
+                    </div>
+                    <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-3 mb-4">
+                        <div class="bg-primary h-3 rounded-full" style="width: 75%;"></div>
+                    </div>
+                    <div class="flex items-center justify-between gap-2 text-sm text-gray-600 dark:text-gray-400">
+                        <span class="material-symbols-outlined text-base">celebration</span>
+                        <span>Próximo Hito: Ahorrar S/ 5,000</span>
+                    </div>
+                </div>
+                <div
+                    class="flex justify-around items-center bg-gray-100 dark:bg-gray-800 rounded-full px-2 py-2 mt-4 shadow-sm">
+                    <button
+                        class="flex-1 text-center py-2 rounded-full text-sm font-medium text-gray-700 dark:text-gray-300 transition-colors duration-200 hover:bg-gray-200 dark:hover:bg-gray-700">Diario</button>
+                    <button
+                        class="flex-1 text-center py-2 rounded-full text-sm font-medium text-primary bg-primary/10 dark:bg-primary/20 transition-colors duration-200">Semanal</button>
+                    <button
+                        class="flex-1 text-center py-2 rounded-full text-sm font-medium text-gray-700 dark:text-gray-300 transition-colors duration-200 hover:bg-gray-200 dark:hover:bg-gray-700">Mensual</button>
+                    <button
+                        class="flex-1 text-center py-2 rounded-full text-sm font-medium text-gray-700 dark:text-gray-300 transition-colors duration-200 hover:bg-gray-200 dark:hover:bg-gray-700">Anual</button>
+                </div>
+            </header>
+            <main class="p-4">
+                <div class="relative mb-8 flex h-64 w-64 items-center justify-center rounded-full mx-auto">
+                    <svg class="absolute h-full w-full" viewBox="0 0 100 100">
+                        <circle class="stroke-ring-gastos" cx="50" cy="50" fill="transparent" r="46"
+                            stroke-dasharray="289" stroke-dashoffset="100" stroke-linecap="round" stroke-width="8">
+                        </circle>
+                        <circle class="stroke-ring-ahorros" cx="50" cy="50" fill="transparent" r="38"
+                            stroke-dasharray="238.76" stroke-dashoffset="70" stroke-linecap="round" stroke-width="8">
+                        </circle>
+                        <circle class="stroke-ring-ingresos" cx="50" cy="50" fill="transparent" r="30"
+                            stroke-dasharray="188.5" stroke-dashoffset="30" stroke-linecap="round" stroke-width="8">
+                        </circle>
+                    </svg>
+                    <div class="z-10 text-center">
+                        <p class="text-sm text-gray-500 dark:text-gray-400">Balance Total</p>
+                        <p class="text-3xl font-bold text-gray-900 dark:text-white">S/ 4,300</p>
+                    </div>
+                </div>
+                <div class="grid grid-cols-3 gap-2 mb-8">
+                    <div class="rounded-lg bg-ring-ingresos/20 p-2 text-center">
+                        <p class="text-sm text-gray-600 dark:text-gray-300">Ingresos</p>
+                        <p class="text-base font-bold text-gray-900 dark:text-white">S/ 12,500</p>
+                    </div>
+                    <div class="rounded-lg bg-ring-gastos/20 p-2 text-center">
+                        <p class="text-sm text-gray-600 dark:text-gray-300">Gastos</p>
+                        <p class="text-base font-bold text-gray-900 dark:text-white">S/ 8,200</p>
+                    </div>
+                    <div class="rounded-lg bg-ring-ahorros/20 p-2 text-center">
+                        <p class="text-sm text-gray-600 dark:text-gray-300">Ahorros</p>
+                        <p class="text-base font-bold text-gray-900 dark:text-white">S/ 4,300</p>
+                    </div>
+                </div>
+                <div class="relative flex justify-end">
+                    <div class="flex items-center gap-3 rounded-full bg-primary/20 dark:bg-primary/30 p-3 pr-4 shadow-lg">
+                        <img alt="Virtual assistant" class="h-10 w-10 rounded-full object-cover border-2 border-primary" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC4K3xrjCZL1k6OSPrPGTvmJIYyxY2JyfGlvzlm1sCfabnwymEDiy_eS0B2r3g2DPNvIO6dpFbKM7llgW_NuSVMZWf-MyKWnvt5erJv0GO76iM125T0jTk5z1HWgJ6z5NnIDlVkl_Th1s4I8kxKQTwcZ4DJTes-uZzxYby4Opnz7W2531sFoyaXGKoQ3KrJf3dqeLFbUz4n5nm__GgsSG9rwQucm6DJAnsgzXGIJiH8jP1FXt70YFF8W4mA0TUsrvmvNbuJl4DmH1Y"/>
+                        <p class="text-base font-semibold text-gray-900 dark:text-white"><a href="asistente.html">¡Hola!</a></p>
+                    </div>
+                </div>
+                <div class="space-y-4">
+                    <div class="flex items-center justify-between rounded-lg bg-gray-100 p-4 dark:bg-background-dark/50">
+                        <div class="flex items-center gap-4">
+                            <div class="flex h-12 w-12 items-center justify-center rounded-full bg-primary/20 text-primary dark:bg-primary/30">
+                            <span class="material-symbols-outlined"> attach_money </span>
+                            </div>
+                            <div>
+                                <p class="font-semibold text-gray-800 dark:text-gray-200">
+                                    Dólar Americano
+                                </p>
+                                <p class="text-sm text-gray-500 dark:text-gray-400">
+                                    1 USD = S/ 3.75
+                                </p>
+                            </div>
+                        </div>
+                        <button class="flex items-center gap-2 rounded-full bg-primary px-4 py-2 text-sm font-bold text-white">
+                        <span>Cambiar</span>
+                        <span class="material-symbols-outlined text-base">
+                            sync_alt
+                        </span>
+                        </button>
+                    </div>
+                </div> 
+            </main>
+        </div>
+        <nav
+            class="sticky bottom-0 border-t border-gray-200/50 dark:border-gray-800/50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm">
+            <div class="mx-auto flex max-w-md items-center justify-around px-4 py-2">
+                <a class="flex flex-col items-center gap-1 p-2 text-primary" href="#">
+                    <span class="material-symbols-outlined"> home </span>
+                    <span class="text-xs font-medium">Inicio</span>
+                </a>
+                <a class="flex flex-col items-center gap-1 p-2 text-gray-500 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors"
+                    href="registro.html">
+                    <span class="material-symbols-outlined">receipt_long</span>
+                    <span class="text-xs font-medium">Registros</span>
+                </a>
+                <a class="flex flex-col items-center gap-1 p-2 text-gray-500 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors"
+                    href="metas.html">
+                    <span class="material-symbols-outlined"> emoji_events </span>
+                    <span class="text-xs font-medium">Metas</span>
+                </a>
+                <a class="flex flex-col items-center gap-1 p-2 text-gray-500 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors"
+                    href="comunidadForo.html">
+                    <span class="material-symbols-outlined"> chat </span>
+                    <span class="text-xs font-medium">Comunidad</span>
+                </a>
+                <a class="flex flex-col items-center gap-1 p-2 text-gray-500 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors"
+                    href="ofertas.html">
+                    <span class="material-symbols-outlined"> local_offer </span>
+                    <span class="text-xs font-medium">Ofertas</span>
+                </a>
+            </div>
+        </nav>
+    </div>
+    <div class="fixed inset-0 bg-background-light dark:bg-background-dark z-50 flex flex-col hidden"
+        id="conversational-analyst">
+        <header class="p-4 flex items-center justify-between border-b border-gray-200 dark:border-gray-700">
+            <button class="text-gray-800 dark:text-gray-200"
+                onclick="document.getElementById('conversational-analyst').classList.add('hidden');">
+                <span class="material-symbols-outlined text-3xl"> close </span>
+            </button>
+            <h1 class="text-xl font-bold text-gray-900 dark:text-white">FinanzApp</h1>
+            <div class="w-8"></div>
+        </header>
+        <main class="flex-grow p-4 overflow-y-auto space-y-4">
+            <div class="flex justify-start">
+                <div class="bg-gray-200 dark:bg-gray-700 rounded-xl p-3 max-w-[80%] text-gray-900 dark:text-white">
+                    <p>¡Hola! Soy Clara. Estoy aquí para ayudarte a entender tus finanzas. ¿Sobre
+                        qué te gustaría hablar hoy?</p>
+                    <div class="mt-2 flex flex-wrap gap-2">
+                        <button class="bg-primary/20 text-primary text-sm px-3 py-1 rounded-full">Mis metas
+                            financieras</button>
+                        <button class="bg-primary/20 text-primary text-sm px-3 py-1 rounded-full">Transacciones
+                            recientes</button>
+                        <button class="bg-primary/20 text-primary text-sm px-3 py-1 rounded-full">Análisis de
+                            gastos</button>
+                    </div>
+                </div>
+            </div>
+            <div class="flex justify-end">
+                <div class="bg-primary rounded-xl p-3 max-w-[80%] text-white">
+                    <p>Quiero saber más sobre mis metas financieras.</p>
+                </div>
+            </div>
+            <div class="flex justify-start">
+                <div class="bg-gray-200 dark:bg-gray-700 rounded-xl p-3 max-w-[80%] text-gray-900 dark:text-white">
+                    <p>¡Excelente! Aquí te presento un resumen de tus metas:</p>
+                    <div class="mt-4 p-4 bg-white dark:bg-gray-800 rounded-lg shadow-inner">
+                        <h3 class="font-semibold text-lg mb-2">Resumen de Metas</h3>
+                        <div class="flex items-center mb-2">
+                            <span class="material-symbols-outlined text-primary mr-2">home</span>
+                            <div>
+                                <p class="font-medium">Comprar un departamento</p>
+                                <p class="text-sm text-gray-600 dark:text-gray-400">Ahorrado: S/ 15,000 / S/ 200,000</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center mb-2">
+                            <span class="material-symbols-outlined text-primary mr-2">school</span>
+                            <div>
+                                <p class="font-medium">Educación hijos</p>
+                                <p class="text-sm text-gray-600 dark:text-gray-400">Ahorrado: S/ 8,000 / S/ 50,000</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <span class="material-symbols-outlined text-primary mr-2">flight_takeoff</span>
+                            <div>
+                                <p class="font-medium">Viaje a Europa</p>
+                                <p class="text-sm text-gray-600 dark:text-gray-400">Ahorrado: S/ 3,000 / S/ 10,000</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-3 flex flex-wrap gap-2">
+                        <button class="bg-primary/20 text-primary text-sm px-3 py-1 rounded-full">Ver detalles de
+                            meta</button>
+                        <button class="bg-primary/20 text-primary text-sm px-3 py-1 rounded-full">Ajustar meta</button>
+                    </div>
+                </div>
+            </div>
+            <div class="flex justify-start">
+                <div class="bg-gray-200 dark:bg-gray-700 rounded-xl p-3 max-w-[80%] text-gray-900 dark:text-white">
+                    <p>Claro, aquí están tus transacciones más recientes y cómo afectan tu balance:</p>
+                    <div class="mt-4 p-4 bg-white dark:bg-gray-800 rounded-lg shadow-inner">
+                        <h3 class="font-semibold text-lg mb-2">Gráfico Circular de Balance</h3>
+                        <div class="relative flex h-48 w-48 items-center justify-center rounded-full mx-auto">
+                            <svg class="absolute h-full w-full" viewBox="0 0 100 100">
+                                <circle class="stroke-ring-gastos" cx="50" cy="50" fill="transparent" r="46"
+                                    stroke-dasharray="289" stroke-dashoffset="100" stroke-linecap="round"
+                                    stroke-width="8"></circle>
+                                <circle class="stroke-ring-ahorros" cx="50" cy="50" fill="transparent" r="38"
+                                    stroke-dasharray="238.76" stroke-dashoffset="70" stroke-linecap="round"
+                                    stroke-width="8"></circle>
+                                <circle class="stroke-ring-ingresos" cx="50" cy="50" fill="transparent" r="30"
+                                    stroke-dasharray="188.5" stroke-dashoffset="30" stroke-linecap="round"
+                                    stroke-width="8"></circle>
+                            </svg>
+                            <div class="z-10 text-center">
+                                <p class="text-sm text-gray-500 dark:text-gray-400">Balance Actual</p>
+                                <p class="text-xl font-bold text-gray-900 dark:text-white">S/ 4,300</p>
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-3 gap-2 mt-4 text-sm">
+                            <div class="rounded-lg bg-ring-ingresos/20 p-2 text-center">
+                                <p class="text-gray-600 dark:text-gray-300">Ingresos</p>
+                                <p class="font-bold text-gray-900 dark:text-white">S/ 12,500</p>
+                            </div>
+                            <div class="rounded-lg bg-ring-gastos/20 p-2 text-center">
+                                <p class="text-gray-600 dark:text-gray-300">Gastos</p>
+                                <p class="font-bold text-gray-900 dark:text-white">S/ 8,200</p>
+                            </div>
+                            <div class="rounded-lg bg-ring-ahorros/20 p-2 text-center">
+                                <p class="text-gray-600 dark:text-gray-300">Ahorros</p>
+                                <p class="font-bold text-gray-900 dark:text-white">S/ 4,300</p>
+                            </div>
+                        </div>
+                        <div
+                            class="mt-4 flex items-center justify-between rounded-lg bg-gray-100 dark:bg-background-dark/50 p-3">
+                            <div class="flex items-center gap-2">
+                                <div
+                                    class="flex h-8 w-8 items-center justify-center rounded-full bg-primary/20 dark:bg-primary/30 text-primary">
+                                    <span class="material-symbols-outlined text-base"> attach_money </span>
+                                </div>
+                                <div>
+                                    <p class="font-semibold text-gray-800 dark:text-gray-200 text-sm">Dólar Americano
+                                    </p>
+                                    <p class="text-xs text-gray-500 dark:text-gray-400">1 USD = S/ 3.75</p>
+                                </div>
+                            </div>
+                            <button
+                                class="flex items-center gap-1 rounded-full bg-primary px-3 py-1 text-xs font-bold text-white">
+                                <span>Cambiar</span>
+                                <span class="material-symbols-outlined text-sm"> sync_alt </span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="mt-3 flex flex-wrap gap-2">
+                        <button class="bg-primary/20 text-primary text-sm px-3 py-1 rounded-full">Ver detalle de
+                            transacciones</button>
+                        <button class="bg-primary/20 text-primary text-sm px-3 py-1 rounded-full">Análisis de
+                            presupuesto</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer class="p-4 border-t border-gray-200 dark:border-gray-700 bg-background-light dark:bg-background-dark">
+            <div class="flex items-center gap-2">
+                <input
+                    class="flex-grow rounded-full bg-gray-100 dark:bg-gray-800 px-4 py-2 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-primary"
+                    placeholder="Escribe tu mensaje..." type="text" />
+                <button class="bg-primary text-white rounded-full p-2">
+                    <span class="material-symbols-outlined"> send </span>
+                </button>
+            </div>
+        </footer>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Show the conversational analyst pop-up immediately on load
+            document.getElementById('conversational-analyst').classList.remove('hidden');
+        });
+    </script>
+
+</body>
+
+</html>

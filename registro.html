@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Finanzas Personales - Dashboard</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&amp;display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#11a4d4",
+                        "background-light": "#f6f8f8",
+                        "background-dark": "#101d22",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#11a4d4',
+                        'background-light': '#f6f8f8',
+                        'background-dark': '#101d22',
+                        'surface-light': '#ffffff',
+                        'surface-dark': '#1a2a30',
+                        'muted-light': '#9ca3af',
+                        'muted-dark': '#92bbc9',
+                        'text-light': '#1f2937',
+                        'text-dark': '#f9fafb'
+                    },
+                    fontFamily: {
+                        display: ['Manrope']
+                    },
+                    borderRadius: {
+                        DEFAULT: '0.5rem',
+                        lg: '0.75rem',
+                        xl: '1rem',
+                        full: '9999px'
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+        .form-select {
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%2392bbc9' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
+            background-position: right 0.5rem center;
+            background-repeat: no-repeat;
+            background-size: 1.5em 1.5em;
+            padding-right: 2.5rem;
+            -webkit-print-color-adjust: exact;
+            print-color-adjust: exact;
+        }
+    </style>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-800 dark:text-slate-200">
+    <div class="flex flex-col min-h-screen">
+        <header class="sticky top-0 z-10 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm">
+            <div class="container mx-auto px-4">
+                <div class="flex items-center justify-between h-16">
+                    <button class="p-2 -ml-2">
+                        <span class="material-symbols-outlined text-slate-800 dark:text-slate-200">
+                            menu
+                        </span>
+                    </button>
+                    <h1 class="text-lg font-bold text-slate-900 dark:text-white">FinanzApp</h1>
+                    <div class="w-8"></div>
+                </div>
+            </div>
+        </header>
+        <main class="p-4 space-y-4">
+            <div class="flex gap-4">
+                <button
+                    class="flex-1 py-3 text-center rounded-lg bg-primary/20 text-primary font-bold">Nuevo Ingreso</button>
+                <button class="flex-1 py-3 text-center rounded-lg bg-primary text-white font-bold">Nuevo Gasto</button>
+            </div>
+            <div class="space-y-4">
+                <div class="relative">
+                    <span
+                        class="absolute left-4 top-1/2 -translate-y-1/2 text-muted-light dark:text-muted-dark font-bold text-2xl">S/</span>
+                    <input
+                        class="w-full pl-12 pr-4 py-4 rounded-lg bg-surface-light dark:bg-surface-dark text-text-light dark:text-text-dark placeholder:text-muted-light placeholder:dark:text-muted-dark text-2xl font-bold border-none focus:ring-2 focus:ring-primary"
+                        placeholder="0.00" type="number" />
+                </div>
+                <select
+                    class="w-full px-4 py-4 rounded-lg appearance-none form-select bg-surface-light dark:bg-surface-dark text-text-light dark:text-text-dark border-none focus:ring-2 focus:ring-primary">
+                    <option class="text-muted-light dark:text-muted-dark" disabled="" selected="">Categoría</option>
+                    <option>Comida</option>
+                    <option>Transporte</option>
+                    <option>Servicios</option>
+                    <option>Entretenimiento</option>
+                </select>
+                <input
+                    class="w-full px-4 py-4 rounded-lg bg-surface-light dark:bg-surface-dark text-text-light dark:text-text-dark placeholder:text-muted-light placeholder:dark:text-muted-dark border-none focus:ring-2 focus:ring-primary"
+                    placeholder="Fecha" type="date" />
+                <textarea
+                    class="w-full px-4 py-4 rounded-lg bg-surface-light dark:bg-surface-dark text-text-light dark:text-text-dark placeholder:text-muted-light placeholder:dark:text-muted-dark border-none focus:ring-2 focus:ring-primary min-h-[120px] resize-none"
+                    placeholder="Notas"></textarea>
+                <button
+                    class="w-full flex items-center justify-center gap-2 px-4 py-4 rounded-lg bg-surface-light dark:bg-surface-dark text-text-light dark:text-text-dark border border-dashed border-muted-light/50 dark:border-muted-dark/50 hover:border-primary">
+                    <span class="material-symbols-outlined"> attach_file </span>
+                    <span class="font-medium">Adjuntar Recibo</span>
+                </button>
+            </div>
+        </main>
+        <div class="p-4 space-y-4">        
+            <div class="grid grid-cols-2 gap-4">
+                <button
+                    class="flex items-center justify-center rounded-lg h-12 px-4 bg-primary text-white text-sm font-bold shadow-lg shadow-primary/30">
+                    <span class="truncate">Guardar</span>
+                </button>
+                <button
+                    class="flex items-center justify-center rounded-lg h-12 px-4 bg-primary/20 dark:bg-primary/30 text-primary dark:text-primary-400 text-sm font-bold">
+                    <span class="truncate">Cancelar</span>
+                </button>
+            </div>
+        </div>
+        <div class="flex-grow">
+            <div class="container mx-auto px-4 py-6">
+                <h2 class="text-2xl font-bold mb-6 text-slate-900 dark:text-white">Resumen</h2>
+                <div class="grid gap-6 sm:grid-cols-1">
+                    <div
+                        class="bg-white/10 dark:bg-black/10 backdrop-blur-sm rounded-xl p-6 border border-white/10 dark:border-black/10">
+                        <div class="flex flex-col gap-2">
+                            <p class="text-base font-medium text-slate-600 dark:text-slate-400">Ingresos Diarios</p>
+                            <p class="text-3xl font-bold text-slate-900 dark:text-white">S/ 1,250</p>
+                            <p class="text-sm text-slate-500 dark:text-slate-400">Hoy</p>
+                        </div>
+                        <div class="mt-6">
+                            <svg fill="none" height="150" preserveAspectRatio="none" viewBox="-3 3 243 150" width="100%"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <defs>
+                                    <linearGradient gradientUnits="userSpaceOnUse" id="chartGradient" x1="0" x2="0"
+                                        y1="0" y2="150">
+                                        <stop stop-color="#11a4d4" stop-opacity="0.3"></stop>
+                                        <stop offset="1" stop-color="#11a4d4" stop-opacity="0"></stop>
+                                    </linearGradient>
+                                </defs>
+                                <path
+                                    d="M0 109C18.1538 109 18.1538 21 36.3077 21C54.4615 21 54.4615 41 72.6154 41C90.7692 41 90.7692 93 108.923 93C127.077 93 127.077 33 145.231 33C163.385 33 163.385 101 181.538 101C199.692 101 199.692 61 217.846 61C236 61 236 45 254.154 45C272.308 45 272.308 121 290.462 121C308.615 121 308.615 149 326.769 149C344.923 149 344.923 1 363.077 1C381.231 1 381.231 81 399.385 81C417.538 81 417.538 129 435.692 129C453.846 129 453.846 25 472 25V150H0V109Z"
+                                    fill="url(#chartGradient)"></path>
+                                <path
+                                    d="M0 109C18.1538 109 18.1538 21 36.3077 21C54.4615 21 54.4615 41 72.6154 41C90.7692 41 90.7692 93 108.923 93C127.077 93 127.077 33 145.231 33C163.385 33 163.385 101 181.538 101C199.692 101 199.692 61 217.846 61C236 61 236 45 254.154 45C272.308 45 272.308 121 290.462 121C308.615 121 308.615 149 326.769 149C344.923 149 344.923 1 363.077 1C381.231 1 381.231 81 399.385 81C417.538 81 417.538 129 435.692 129C453.846 129 453.846 25 472 25"
+                                    stroke="#11a4d4" stroke-linecap="round" stroke-width="3"></path>
+                            </svg>
+                            <div class="flex justify-between mt-2 px-2">
+                                <p class="text-xs font-bold text-slate-500 dark:text-slate-400">Lun</p>
+                                <p class="text-xs font-bold text-slate-500 dark:text-slate-400">Mar</p>
+                                <p class="text-xs font-bold text-slate-500 dark:text-slate-400">Mier</p>
+                                <p class="text-xs font-bold text-slate-500 dark:text-slate-400">jue</p>
+                                <p class="text-xs font-bold text-slate-500 dark:text-slate-400">Vie</p>
+                                <p class="text-xs font-bold text-slate-500 dark:text-slate-400">Sab</p>
+                                <p class="text-xs font-bold text-slate-500 dark:text-slate-400">Dom</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="bg-white/10 dark:bg-black/10 backdrop-blur-sm rounded-xl p-6 border border-white/10 dark:border-black/10">
+                        <div class="flex flex-col gap-2">
+                            <p class="text-base font-medium text-slate-600 dark:text-slate-400">Gastos Mensuales</p>
+                            <p class="text-3xl font-bold text-slate-900 dark:text-white">S/ 3,500</p>
+                            <p class="text-sm text-slate-500 dark:text-slate-400">Este Mes</p>
+                        </div>
+                        <div class="mt-6">
+                            <svg fill="none" height="150" preserveAspectRatio="none" viewBox="-3 0 478 150" width="100%"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <defs>
+                                    <linearGradient gradientUnits="userSpaceOnUse" id="chartGradient" x1="0" x2="0"
+                                        y1="0" y2="150">
+                                        <stop stop-color="#11a4d4" stop-opacity="0.3"></stop>
+                                        <stop offset="1" stop-color="#11a4d4" stop-opacity="0"></stop>
+                                    </linearGradient>
+                                </defs>
+                                <path
+                                    d="M0 109C18.1538 109 18.1538 21 36.3077 21C54.4615 21 54.4615 41 72.6154 41C90.7692 41 90.7692 93 108.923 93C127.077 93 127.077 33 145.231 33C163.385 33 163.385 101 181.538 101C199.692 101 199.692 61 217.846 61C236 61 236 45 254.154 45C272.308 45 272.308 121 290.462 121C308.615 121 308.615 149 326.769 149C344.923 149 344.923 1 363.077 1C381.231 1 381.231 81 399.385 81C417.538 81 417.538 129 435.692 129C453.846 129 453.846 25 472 25V150H0V109Z"
+                                    fill="url(#chartGradient)"></path>
+                                <path
+                                    d="M0 109C18.1538 109 18.1538 21 36.3077 21C54.4615 21 54.4615 41 72.6154 41C90.7692 41 90.7692 93 108.923 93C127.077 93 127.077 33 145.231 33C163.385 33 163.385 101 181.538 101C199.692 101 199.692 61 217.846 61C236 61 236 45 254.154 45C272.308 45 272.308 121 290.462 121C308.615 121 308.615 149 326.769 149C344.923 149 344.923 1 363.077 1C381.231 1 381.231 81 399.385 81C417.538 81 417.538 129 435.692 129C453.846 129 453.846 25 472 25"
+                                    stroke="#11a4d4" stroke-linecap="round" stroke-width="3"></path>
+                            </svg>
+                            <div class="flex justify-between mt-2 px-2">
+                                <p class="text-xs font-bold text-slate-500 dark:text-slate-400">Ene</p>
+                                <p class="text-xs font-bold text-slate-500 dark:text-slate-400">Feb</p>
+                                <p class="text-xs font-bold text-slate-500 dark:text-slate-400">Mar</p>
+                                <p class="text-xs font-bold text-slate-500 dark:text-slate-400">Abr</p>
+                                <p class="text-xs font-bold text-slate-500 dark:text-slate-400">May</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--<div class="mt-8">
+                    <h2 class="text-2xl font-bold mb-4 text-slate-900 dark:text-white">Acciones Rápidas</h2>
+                    <div class="grid grid-cols-2 gap-4">
+                        <button
+                            class="flex items-center justify-center rounded-lg h-12 px-4 bg-primary text-white text-sm font-bold shadow-lg shadow-primary/30">
+                            <span class="truncate">Nuevo Ingreso</span>
+                        </button>
+                        <button
+                            class="flex items-center justify-center rounded-lg h-12 px-4 bg-primary/20 dark:bg-primary/30 text-primary dark:text-primary-400 text-sm font-bold">
+                            <span class="truncate">Nuevo Gasto</span>
+                        </button>
+                    </div>
+                </div>-->
+            </div>
+        </div>
+        <footer
+            class="sticky bottom-0 z-10 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm border-t border-slate-200 dark:border-slate-800">
+            <div class="container mx-auto px-4">
+                <nav class="flex justify-around h-20 items-center">
+                    <a class="flex flex-col items-center justify-center gap-1 text-primary" href="principal.html">
+                        <span class="material-symbols-outlined">home</span>
+                        <p class="text-xs font-medium">Inicio</p>
+                    </a>
+                    <a class="flex flex-col items-center justify-center gap-1 text-slate-500 dark:text-slate-400"
+                        href="registro.html">
+                        <span class="material-symbols-outlined">receipt_long</span>
+                        <p class="text-xs font-medium">Registros</p>
+                    </a>
+                    <a class="flex flex-col items-center justify-center gap-1 text-slate-500 dark:text-slate-400"
+                        href="metas.html">
+                        <span class="material-symbols-outlined">emoji_events</span>
+                        <p class="text-xs font-medium">Metas</p>
+                    </a>
+                    <a class="flex flex-col items-center justify-center gap-1 text-slate-500 dark:text-slate-400"
+                        href="comunidadForo.html">
+                        <span class="material-symbols-outlined">chat_bubble</span>
+                        <p class="text-xs font-medium">Comunidad</p>
+                    </a>
+                    <a class="flex flex-col items-center justify-center gap-1 text-slate-500 dark:text-slate-400"
+                        href="ofertas.html">
+                        <span class="material-symbols-outlined">percent</span>
+                        <p class="text-xs font-medium">Ofertas</p>
+                    </a>
+                </nav>
+            </div>
+        </footer>
+    </div>
+
+</body>
+
+</html>

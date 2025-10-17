@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Stitch Design</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect" />
+    <link as="style"
+        href="https://fonts.googleapis.com/css2?display=swap&amp;family=Manrope%3Awght%40400%3B500%3B700%3B800"
+        onload="this.rel='stylesheet'" rel="stylesheet" />
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#11a4d4",
+                        "background-light": "#f6f8f8",
+                        "background-dark": "#101d22",
+                    },
+                    fontFamily: {
+                        display: ["Manrope"],
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.25rem",
+                        lg: "0.5rem",
+                        xl: "0.75rem",
+                        full: "9999px",
+                    },
+                },
+            },
+        };
+    </script>
+    <style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark font-display text-gray-800 dark:text-gray-200">
+    <div class="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden">
+        <header
+            class="sticky top-0 z-10 flex items-center justify-between border-b border-white/10 bg-background-light/80 px-4 py-3 backdrop-blur-sm dark:bg-background-dark/80">
+            <button class="text-gray-600 dark:text-gray-400">
+                <svg fill="currentColor" height="24" viewBox="0 0 256 256" width="24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M224,128a8,8,0,0,1-8,8H40a8,8,0,0,1,0-16H216A8,8,0,0,1,224,128ZM40,72H216a8,8,0,0,0,0-16H40a8,8,0,0,0,0,16ZM216,184H40a8,8,0,0,0,0,16H216a8,8,0,0,0,0-16Z">
+                    </path>
+                </svg>
+            </button>
+            <h1 class="text-lg font-bold text-gray-900 dark:text-white">Mi Progreso</h1>
+            <div class="w-6"></div>
+        </header>
+        <main class="flex-1 overflow-y-auto">
+            <div class="p-4 pt-6 text-center">
+                <div class="inline-block rounded-full bg-primary/20 p-1">
+                    <div class="h-32 w-32 rounded-full bg-cover bg-center"
+                        style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAv-3HAnIc9ib9SSBO5x3ef7QHi_FUM6K_U7733m8F2pF0wpfgA6Zq5yEuVFVZKHQgabLlsh36yIqx7QeoOfbRYSBt7cFTBZQuS3Dg-0D7J5xKwgzY1wTXpaCMniEhv-B9eiaxgVg8UkbqH4sg7YgPUC1biVGcEL9eZG1IvPmqFZR_rBFXhNX0jIT9_XWTgDRojwmvawDnjRp8xGpx7V3JtDKMPcCJjx4IXCFdy8H0RQJbSYQnsKa2KZtGjsXJdMZJZG-ZB0TtgiB8");'>
+                    </div>
+                </div>
+                <p class="mt-4 text-2xl font-bold text-gray-900 dark:text-white">Sofia Ramirez</p>
+                <p class="text-base font-medium text-primary">Nivel 3</p>
+            </div>
+            <div class="px-4 py-3">
+                <div class="flex justify-between text-sm">
+                    <p class="font-medium text-gray-700 dark:text-gray-300">Puntos para el siguiente nivel</p>
+                    <p class="font-semibold text-gray-900 dark:text-white">120/200</p>
+                </div>
+                <div class="mt-2 h-2 w-full rounded-full bg-primary/20">
+                    <div class="h-2 rounded-full bg-primary" style="width: 60%"></div>
+                </div>
+            </div>
+            <div class="flex-1 overflow-y-auto pb-8">
+                <div class="px-4 pt-6 pb-4">
+                    <h2 class="text-2xl font-bold text-slate-900 dark:text-white">Mis metas</h2>
+                </div>
+                <div class="space-y-4 px-4">
+                    <div class="bg-primary/10 dark:bg-primary/20 p-4 rounded-xl flex items-center gap-4">
+                        <div class="w-20 h-20 bg-center bg-cover rounded-lg"
+                            style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuD_4LkKDGElSR1ir-odlzC3Hzlx8c74XW0_MmLMIecrG_TYYC659__i_jEWEqgFr8DwOnXBnXzS2Lysiu36gbKecpiBCoaGycH8lHnbJHs_OjAkU_l6uj8C2iDeJWfy2Y0c45a1kL_6YWy0QDdD4s5B_qvniVbzKCZMq_YHbuzf2ib6ZEtv10D7-gaVdmjdR0jwOkaeAAhRy4HpugHkUa1fuaQV6AUCpo3zyuNbgLKUBIf8RVG4T7hi5g6aDnI-ioDQ9ZRPEZGf7eg");'>
+                        </div>
+                        <div class="flex-1">
+                            <p class="text-sm text-slate-500 dark:text-slate-400">Meta de ahorro</p>
+                            <p class="text-base font-bold text-slate-900 dark:text-white">Viaje a Machu Picchu</p>
+                            <p class="text-sm text-slate-500 dark:text-slate-400">S/ 5,000</p>
+                        </div>
+                    </div>
+                    <div class="bg-primary/10 dark:bg-primary/20 p-4 rounded-xl flex items-center gap-4">
+                        <div class="w-20 h-20 bg-center bg-cover rounded-lg"
+                            style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDaP4qc8B-bamTAwQW0_nZTgfHadseT31G3yOyoOB9gKOKWcREUocjBRmTSJ5_ow2lsBGUUGAtS8h_3Fi_qGiDe5Bb4X-yyuR8pE_D2VYSQv3uqIJi6JzDo12rm7IQkNjisOdamGI7gsAMJVZqA-yB3U_HgIrYLOo_2Tz023ll4D8J9tL067J-AlsJgqd7cCy9B_UM9OWTDFdjHb3otlJayxUE9wrhQfoR7U2MbayCTCo614jPUaVHbyv850x6rwlKlEdDgk0vtBNI");'>
+                        </div>
+                        <div class="flex-1">
+                            <p class="text-sm text-slate-500 dark:text-slate-400">Meta de ahorro</p>
+                            <p class="text-base font-bold text-slate-900 dark:text-white">Comprar una moto</p>
+                            <p class="text-sm text-slate-500 dark:text-slate-400">S/ 10,000</p>
+                        </div>
+                    </div>
+                    <div class="bg-primary/10 dark:bg-primary/20 p-4 rounded-xl flex items-center gap-4">
+                        <div class="w-20 h-20 bg-center bg-cover rounded-lg"
+                            style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDTfwU1JRZjUku7qruYRDITcCwg3-1CyoYbqdWD4-cKjYmYMV8r5SM968qWvr0X4BQXT2UX5AgwX1wfuM6vQvwVNPJdmqKlStxtF4jTWIJiqYf1xhANeEgivVCDaocxYK9JI8wI-SoGG4fJqcPJjkSUPhpSxZ-oYkSG1LZ4kxqTSggTkaPS_rtxXFX_RKRMR1RXlwnIt3wS3tu5Xhdhx3poxyNHV7ZIMQCVflU-A1MeYfJe9OrN1zEezs-h7b_LXtX30Hkgf6uDBQI");'>
+                        </div>
+                        <div class="flex-1">
+                            <p class="text-sm text-slate-500 dark:text-slate-400">Meta de ahorro</p>
+                            <p class="text-base font-bold text-slate-900 dark:text-white">Renovar mi casa</p>
+                            <p class="text-sm text-slate-500 dark:text-slate-400">S/ 20,000</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <section class="space-y-4 px-4 pb-8">
+                    <h2 class="text-xl font-bold text-slate-900 dark:text-white mb-4">Juegos Disponibles</h2>
+                    <div class="grid grid-cols-2 gap-4">
+                        <a class="group" href="#">
+                            <div class="w-full aspect-square rounded-xl bg-cover bg-center mb-2"
+                                style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBhKUvwR8TpYSWVEy_pMU86MFHnG7TtLR55a8g_8WBLxroN2tvycIFxZ8qw-BEEGT3efSBJrr607VYI_SH4z8V-riPQ0pCEuV3nQMyEHCAhvF-7y1l-E-vgU68G9m0fpKljvwzlLXmu4PIWxkgSKiPyEMyM0QRZO1EL5PZEnEHrkdCnYqhpTSRSFCTxpY6isCVMVHiIOsHamR3ihr12_kZXowTe2s_mKrL4J4kNakrmDExjoBP6nbmjEQk_ABs1LW3XNwktwOmHvQQ");'>
+                            </div>
+                            <p
+                                class="text-base font-medium text-slate-800 dark:text-slate-200 group-hover:text-primary transition-colors">
+                                Desafíos de Presupuesto</p>
+                        </a>
+                        <a class="group" href="#">
+                            <div class="w-full aspect-square rounded-xl bg-cover bg-center mb-2"
+                                style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCHF53_XDQTu0j6EAnMZYlZvshfxgLVChOKldieT73Ah15qWWZnPLUHSCHGGU7tddWka4_L1RFbRoNrevSX84quiqa1edFRYYALliy9J7N1NLMjjHUic5PULa68ATD6FF7-yhCc_5tUipxy1MstPergs4JewoeBRbIBRx9mCs3RFWbUzblV_ijk4jyGCOqaiLhsdv9MnfPYZeHHI-WkfKTh4KxpMABEw5C9iufkPfXKZmfRJUVdAbIairzh9fWc_2J2gPO211l0Ybw");'>
+                            </div>
+                            <p
+                                class="text-base font-medium text-slate-800 dark:text-slate-200 group-hover:text-primary transition-colors">
+                                Simulaciones de Inversión</p>
+                        </a>
+                        <a class="group col-span-2" href="#">
+                            <div class="w-full aspect-[2/1] rounded-xl bg-cover bg-center mb-2"
+                                style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBDtZeVhEOem-5L4ioEYptNmFIEQbdyVESj7EayVb_1q39DLp0dFZtSc0jwSLAygOIUgDfBHU3kJ3UacF3HTOCuZBjhQ2GixCkRg5ADw0QN2QpHX1n4R-Cw_K03cZHHniGlSBISy6rQno5g8MNq3KTO7KaU-bJskXCSq-GsZ1b0WtS9TrsMF-evcAb_fDkIQnB6JVjV2CGVqA7aEYAECl5MmMqUZAsx0DslTNgbR0buQ4g54Bj--9_zvpEy4kfYDsxtIEXC9qV2HV8");'>
+                            </div>
+                            <p
+                                class="text-base font-medium text-slate-800 dark:text-slate-200 group-hover:text-primary transition-colors">
+                                Trivias Financieras</p>
+                        </a>
+                    </div>
+                </section>
+                <section class="space-y-4 px-4">
+                    <h2 class="text-xl font-bold text-slate-900 dark:text-white mb-4">Recompensas Pendientes</h2>
+                    <div class="flex items-center gap-4 rounded-xl bg-slate-100 dark:bg-slate-800/50 p-4">
+                        <div class="w-28 h-28 shrink-0 bg-center bg-cover rounded-lg flex-1"
+                            style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC5RNl9j4IT2KydSu4fswknLwQX4fBnNG3VbciCUQIXjyDz7n3o4h9TW1MGLHG7R4iliOzNfJHDCuKjY5uo_aiU_dx3Z9nri4wXPCygpF7hzxfhYz82eNd1ITb9g2cEv6rSY_lW9MvpydFbHLya0YbMPI2-Pza3cKFq-9eATXu4CP4elCwEg28RJZa1HAYBc7WLzccGK5Z4U6Fzkiegh9QTTz175h_0PoI6_KfK4W7SmVqpLVOqbOHusAWqJ5TkkoWTDYGDHQLgNEI");'>
+                        </div>
+                        <div class="flex flex-col gap-1 flex-[2_2_0px]">
+                            <p class="text-sm font-medium text-slate-600 dark:text-slate-400">Recompensa</p>
+                            <p class="text-base font-bold text-slate-900 dark:text-white">Bono de Ahorro</p>
+                            <p class="text-sm text-slate-600 dark:text-slate-400">Completa 3 desafíos de presupuesto
+                                para ganar un bono de ahorro del 5%.</p>
+                        </div>
+                    </div>
+                </section>
+            <div class="py-5">
+                <h2 class="px-4 text-xl font-bold text-gray-900 dark:text-white">Recompensas</h2>
+                <div
+                    class="flex gap-3 overflow-x-auto p-4 [-ms-scrollbar-style:none] [scrollbar-width:none] [&amp;::-webkit-scrollbar]:hidden">
+                    <div class="flex w-40 flex-shrink-0 flex-col gap-2">
+                        <div class="aspect-square w-full rounded-lg bg-cover bg-center"
+                            style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBFxtHc8ukAm0s3FBQKnWR5cbxBqbG0LBTGlJOt0guyVO3r6bWqJ0eV5N6Vxl0eH9U-RFR7AV6Xk1NdIBHwqTNbQ4soF4YZaOOrihskEXA7wXXeD6b4ne594B6dpyDq5OZKVohAf5JQGaLhUjj7htubcbRODxDG0S67u--cXAGN_2NWDYm2SPJIukQRzdchdyVoGm0-WqrQrFFiZmBtPxVYIeAEShaDteUonNTFCRWztRZ4Wd0AYLVSWVPRnUCXBwzE9UEcdq3H4Vc");'>
+                        </div>
+                        <div>
+                            <p class="font-semibold text-gray-900 dark:text-white">Bono de ahorro</p>
+                            <p class="text-sm text-gray-600 dark:text-gray-400">Gana un bono al alcanzar tu meta.</p>
+                        </div>
+                    </div>
+                    <div class="flex w-40 flex-shrink-0 flex-col gap-2">
+                        <div class="aspect-square w-full rounded-lg bg-cover bg-center"
+                            style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAORmN4sEFSE88l1VrV8axAPylWj_VGd4vIWXrkCPWglb8Mzpthwcn5u3m1OuMS1Bwa5OsD-uQ98Q1QH6FgZ_sNyEYi6KfQ1YHTkxCOhTrypmOZnWZhwnVdKD0Otxm1ya99Uc1_B5o7kwZpnUBR8INjZylaNrPFko2VQALRdPaHNruQF7s_4u8BaVJwy3mJ2vjr0jUUnFoEC6_oD5NqhNqek-m8WwPeQX81q384Q_Im2AtR5S68R4W8ck4apnS-vTusBb2wqK39vVE");'>
+                        </div>
+                        <div>
+                            <p class="font-semibold text-gray-900 dark:text-white">Insignia de inversor</p>
+                            <p class="text-sm text-gray-600 dark:text-gray-400">Obtén una insignia por tu primera
+                                inversión.</p>
+                        </div>
+                    </div>
+                    <div class="flex w-40 flex-shrink-0 flex-col gap-2">
+                        <div class="aspect-square w-full rounded-lg bg-cover bg-center"
+                            style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBypG69Tx8FSxaXbIiZIahk4XfbvHF08Ovjb0C0iuI0wI6eeuQmARCxM1Z-T1YMv64Iv1E-aefBZhiH-oLoh7l60Bhzqd-fe8NWkGVNHpzUdUgi16IXEAMx1qYaEJz4Dr4DNuT_fiqFutB-Dux7Rjab7xmocRoBdCvDbNJ5F-0-WDA1dCV3UAtMF5kM1LhtbNcyRUZqSk9C4N91WxnIBypP7y49kTf1uOD_Lxzt8EeHF91jyx_XrotvNAY3KJqs7vzG-70k6c5K2sI");'>
+                        </div>
+                        <div>
+                            <p class="font-semibold text-gray-900 dark:text-white">Recompensa de inversión</p>
+                            <p class="text-sm text-gray-600 dark:text-gray-400">Recibe una recompensa por invertir.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="px-4 pb-16 pt-5">
+                <h2 class="mb-3 text-xl font-bold text-gray-900 dark:text-white">Desafíos Pendientes</h2>
+                <div class="space-y-3">
+                    <div
+                        class="flex items-center gap-4 rounded-lg bg-background-light p-3 shadow-sm dark:bg-primary/10">
+                        <div
+                            class="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-primary/20 text-primary">
+                            <svg fill="currentColor" height="24" viewBox="0 0 256 256" width="24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M216,64H192v-8a24,24,0,0,0-24-24H88a24,24,0,0,0-24,24v8H40a16,16,0,0,0-16,16v88a16,16,0,0,0,16,16h8v8a24,24,0,0,0,24,24h80a24,24,0,0,0,24-24v-8h8a16,16,0,0,0,16-16V80A16,16,0,0,0,216,64Zm-56,128a8,8,0,0,1-8,8H104a8,8,0,0,1-8-8v-8h64Zm48-24a8,8,0,0,1-8,8H48a8,8,0,0,1-8-8V80a8,8,0,0,1,8-8H208a8,8,0,0,1,8,8Zm-32-80a12,12,0,1,1-12-12A12,12,0,0,1,176,96Z">
+                                </path>
+                            </svg>
+                        </div>
+                        <div>
+                            <p class="font-semibold text-gray-900 dark:text-white">Desafío de ahorro</p>
+                            <p class="text-sm text-gray-600 dark:text-gray-400">Ahorra S/ 500 este mes</p>
+                        </div>
+                    </div>
+                    <div
+                        class="flex items-center gap-4 rounded-lg bg-background-light p-3 shadow-sm dark:bg-primary/10">
+                        <div
+                            class="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-primary/20 text-primary">
+                            <svg fill="currentColor" height="24" viewBox="0 0 256 256" width="24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M232,208a8,8,0,0,1-8,8H32a8,8,0,0,1-8-8V48a8,8,0,0,1,16,0v94.37L90.73,98a8,8,0,0,1,10.07-.38l58.81,44.11L218.73,90a8,8,0,1,1,10.54,12l-64,56a8,8,0,0,1-10.07.38L96.39,114.29,40,163.63V200H224A8,8,0,0,1,232,208Z">
+                                </path>
+                            </svg>
+                        </div>
+                        <div>
+                            <p class="font-semibold text-gray-900 dark:text-white">Desafío de inversión</p>
+                            <p class="text-sm text-gray-600 dark:text-gray-400">Invierte S/ 200 en acciones</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <nav
+            class="fixed bottom-0 left-0 right-0 border-t border-white/10 bg-background-light/80 backdrop-blur-sm dark:bg-background-dark/80">
+            <div class="flex h-16 justify-around">
+                <a class="flex flex-1 flex-col items-center justify-center gap-1 text-gray-600 dark:text-gray-400"
+                    href="principal.html">
+                    <svg fill="currentColor" height="24" viewBox="0 0 256 256" width="24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M218.83,103.77l-80-75.48a1.14,1.14,0,0,1-.11-.11,16,16,0,0,0-21.53,0l-.11.11L37.17,103.77A16,16,0,0,0,32,115.55V208a16,16,0,0,0,16,16H96a16,16,0,0,0,16-16V160h32v48a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V115.55A16,16,0,0,0,218.83,103.77ZM208,208H160V160a16,16,0,0,0-16-16H112a16,16,0,0,0-16,16v48H48V115.55l.11-.1L128,40l79.9,75.43.11.1Z">
+                        </path>
+                    </svg>
+                    <p class="text-xs font-medium">Inicio</p>
+                </a>
+                <a class="flex flex-1 flex-col items-center justify-center gap-1 text-gray-600 dark:text-gray-400"
+                    href="registro.html">
+                    <svg fill="currentColor" height="24" viewBox="0 0 256 256" width="24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M72,104a8,8,0,0,1,8-8h96a8,8,0,0,1,0,16H80A8,8,0,0,1,72,104Zm8,40h96a8,8,0,0,0,0-16H80a8,8,0,0,0,0,16ZM232,56V208a8,8,0,0,1-11.58,7.15L192,200.94l-28.42,14.21a8,8,0,0,1-7.16,0L128,200.94,99.58,215.15a8,8,0,0,1-7.16,0L64,200.94,35.58,215.15A8,8,0,0,1,24,208V56A16,16,0,0,1,40,40H216A16,16,0,0,1,232,56Zm-16,0H40V195.06l20.42-10.22a8,8,0,0,1,7.16,0L96,199.06l28.42-14.22a8,8,0,0,1,7.16,0L160,199.06l28.42-14.22a8,8,0,0,1,7.16,0L216,195.06Z">
+                        </path>
+                    </svg>
+                    <p class="text-xs font-medium">Registros</p>
+                </a>
+                <a class="flex flex-1 flex-col items-center justify-center gap-1 text-primary" href="metas.html">
+                    <div class="rounded-full bg-primary/20 p-3">
+                        <svg fill="currentColor" height="24" viewBox="0 0 256 256" width="24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M232,64H208V56a16,16,0,0,0-16-16H64A16,16,0,0,0,48,56v8H24A16,16,0,0,0,8,80V96a40,40,0,0,0,40,40h3.65A80.13,80.13,0,0,0,120,191.61V216H96a8,8,0,0,0,0,16h64a8,8,0,0,0,0-16H136V191.58c31.94-3.23,58.44-25.64,68.08-55.58H208a40,40,0,0,0,40-40V80A16,16,0,0,0,232,64ZM48,120A24,24,0,0,1,24,96V80H48v32q0,4,.39,8ZM232,96a24,24,0,0,1-24,24h-.5a81.81,81.81,0,0,0,.5-8.9V80h24Z">
+                            </path>
+                        </svg>
+                    </div>
+                    <p class="text-xs font-medium">Metas</p>
+                </a>
+                <a class="flex flex-1 flex-col items-center justify-center gap-1 text-gray-600 dark:text-gray-400"
+                    href="comunidadForo.html">
+                    <svg fill="currentColor" height="24" viewBox="0 0 256 256" width="24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M140,128a12,12,0,1,1-12-12A12,12,0,0,1,140,128ZM84,116a12,12,0,1,0,12,12A12,12,0,0,0,84,116Zm88,0a12,12,0,1,0,12,12A12,12,0,0,0,172,116Zm60,12A104,104,0,0,1,79.12,219.82L45.07,231.17a16,16,0,0,1-20.24-20.24l11.35-34.05A104,104,0,1,1,232,128Zm-16,0A88,88,0,1,0,51.81,172.06a8,8,0,0,1,.66,6.54L40,216,77.4,203.53a7.85,7.85,0,0,1,2.53-.42,8,8,0,0,1,4,1.08A88,88,0,0,0,216,128Z">
+                        </path>
+                    </svg>
+                    <p class="text-xs font-medium">Comunidad</p>
+                </a>
+                <a class="flex flex-1 flex-col items-center justify-center gap-1 text-gray-600 dark:text-gray-400"
+                    href="ofertas.html">
+                    <svg fill="currentColor" height="24" viewBox="0 0 256 256" width="24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M205.66,61.64l-144,144a8,8,0,0,1-11.32-11.32l144-144a8,8,0,0,1,11.32,11.31ZM50.54,101.44a36,36,0,0,1,50.92-50.91h0a36,36,0,0,1-50.92,50.91ZM56,76A20,20,0,1,0,90.14,61.84h0A20,20,0,0,0,56,76ZM216,180a36,36,0,1,1-10.54-25.46h0A35.76,35.76,0,0,1,216,180Zm-16,0a20,20,0,1,0-5.86,14.14A19.87,19.87,0,0,0,200,180Z">
+                        </path>
+                    </svg>
+                    <p class="text-xs font-medium">Ofertas</p>
+                </a>
+            </div>
+        </nav>
+    </div>
+
+</body>
+
+</html>

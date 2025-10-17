@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect" />
+    <link as="style"
+        href="https://fonts.googleapis.com/css2?display=swap&amp;family=Manrope%3Awght%40400%3B500%3B700%3B800&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900"
+        onload="this.rel='stylesheet'" rel="stylesheet" />
+    <title>Stitch Design</title>
+    <link href="data:image/x-icon;base64," rel="icon" type="image/x-icon" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#11a4d4",
+                        "background-light": "#f6f8f8",
+                        "background-dark": "#101d22",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark font-display">
+    <div class="relative flex h-auto min-h-screen w-full flex-col justify-between overflow-x-hidden">
+        <div class="flex-grow">
+            <header
+                class="flex items-center justify-between p-4 bg-background-light dark:bg-background-dark/80 backdrop-blur-sm sticky top-0 z-10">
+                <button class="text-slate-800 dark:text-slate-200">
+                    <span class="material-symbols-outlined">
+                        menu
+                    </span>
+                </button>
+                <h1 class="text-lg font-bold text-slate-900 dark:text-white flex-1 text-center">Finanzas Divertidas</h1>
+                <div class="w-8"></div>
+            </header>
+            <main class="p-4 space-y-8">
+                <section class="flex items-center gap-4">
+                    <div class="h-24 w-24 shrink-0 rounded-full bg-cover bg-center"
+                        style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDd3l4o1LqYkeGJZXa2KbOT8sddinTQx9hKBWDNCxv6gtUi3YxWC9Vhjqu73irzDo_0CUlgH0mjQWkXNbbbQjiQtV3fhqfioeNWVlkjpOD-dM1HMwjpMa9PrF9U--9xqTwl31l5yMRsdltWi6x9CjaahkA5m8OuQ-0teRwZU3xCo0ZOmx1OW2xXK2N61L06E_guGfPrKugu4TgYwNRXeI50qEGtDchO_xCzIQab3IxSmSEoJqV2vEnfDMGeOT_nlY5x7IVPEmorG4s");'>
+                    </div>
+                    <div>
+                        <p class="text-2xl font-bold text-slate-900 dark:text-white">Carlos</p>
+                        <p class="text-base text-slate-600 dark:text-slate-400">Nivel 3</p>
+                    </div>
+                </section>
+                <section>
+                    <div class="flex justify-between items-center mb-2">
+                        <p class="text-sm font-medium text-slate-700 dark:text-slate-300">Progreso General</p>
+                        <p class="text-sm font-semibold text-primary">60%</p>
+                    </div>
+                    <div class="w-full bg-slate-200 dark:bg-slate-700 rounded-full h-2">
+                        <div class="bg-primary h-2 rounded-full" style="width: 60%;"></div>
+                    </div>
+                </section>
+                <section>
+                    <h2 class="text-xl font-bold text-slate-900 dark:text-white mb-4">Juegos Disponibles</h2>
+                    <div class="grid grid-cols-2 gap-4">
+                        <a class="group" href="#">
+                            <div class="w-full aspect-square rounded-xl bg-cover bg-center mb-2"
+                                style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBhKUvwR8TpYSWVEy_pMU86MFHnG7TtLR55a8g_8WBLxroN2tvycIFxZ8qw-BEEGT3efSBJrr607VYI_SH4z8V-riPQ0pCEuV3nQMyEHCAhvF-7y1l-E-vgU68G9m0fpKljvwzlLXmu4PIWxkgSKiPyEMyM0QRZO1EL5PZEnEHrkdCnYqhpTSRSFCTxpY6isCVMVHiIOsHamR3ihr12_kZXowTe2s_mKrL4J4kNakrmDExjoBP6nbmjEQk_ABs1LW3XNwktwOmHvQQ");'>
+                            </div>
+                            <p
+                                class="text-base font-medium text-slate-800 dark:text-slate-200 group-hover:text-primary transition-colors">
+                                Desafíos de Presupuesto</p>
+                        </a>
+                        <a class="group" href="#">
+                            <div class="w-full aspect-square rounded-xl bg-cover bg-center mb-2"
+                                style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCHF53_XDQTu0j6EAnMZYlZvshfxgLVChOKldieT73Ah15qWWZnPLUHSCHGGU7tddWka4_L1RFbRoNrevSX84quiqa1edFRYYALliy9J7N1NLMjjHUic5PULa68ATD6FF7-yhCc_5tUipxy1MstPergs4JewoeBRbIBRx9mCs3RFWbUzblV_ijk4jyGCOqaiLhsdv9MnfPYZeHHI-WkfKTh4KxpMABEw5C9iufkPfXKZmfRJUVdAbIairzh9fWc_2J2gPO211l0Ybw");'>
+                            </div>
+                            <p
+                                class="text-base font-medium text-slate-800 dark:text-slate-200 group-hover:text-primary transition-colors">
+                                Simulaciones de Inversión</p>
+                        </a>
+                        <a class="group col-span-2" href="#">
+                            <div class="w-full aspect-[2/1] rounded-xl bg-cover bg-center mb-2"
+                                style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBDtZeVhEOem-5L4ioEYptNmFIEQbdyVESj7EayVb_1q39DLp0dFZtSc0jwSLAygOIUgDfBHU3kJ3UacF3HTOCuZBjhQ2GixCkRg5ADw0QN2QpHX1n4R-Cw_K03cZHHniGlSBISy6rQno5g8MNq3KTO7KaU-bJskXCSq-GsZ1b0WtS9TrsMF-evcAb_fDkIQnB6JVjV2CGVqA7aEYAECl5MmMqUZAsx0DslTNgbR0buQ4g54Bj--9_zvpEy4kfYDsxtIEXC9qV2HV8");'>
+                            </div>
+                            <p
+                                class="text-base font-medium text-slate-800 dark:text-slate-200 group-hover:text-primary transition-colors">
+                                Trivias Financieras</p>
+                        </a>
+                    </div>
+                </section>
+                <section>
+                    <h2 class="text-xl font-bold text-slate-900 dark:text-white mb-4">Recompensas Pendientes</h2>
+                    <div class="flex items-center gap-4 rounded-xl bg-slate-100 dark:bg-slate-800/50 p-4">
+                        <div class="w-28 h-28 shrink-0 bg-center bg-cover rounded-lg flex-1"
+                            style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC5RNl9j4IT2KydSu4fswknLwQX4fBnNG3VbciCUQIXjyDz7n3o4h9TW1MGLHG7R4iliOzNfJHDCuKjY5uo_aiU_dx3Z9nri4wXPCygpF7hzxfhYz82eNd1ITb9g2cEv6rSY_lW9MvpydFbHLya0YbMPI2-Pza3cKFq-9eATXu4CP4elCwEg28RJZa1HAYBc7WLzccGK5Z4U6Fzkiegh9QTTz175h_0PoI6_KfK4W7SmVqpLVOqbOHusAWqJ5TkkoWTDYGDHQLgNEI");'>
+                        </div>
+                        <div class="flex flex-col gap-1 flex-[2_2_0px]">
+                            <p class="text-sm font-medium text-slate-600 dark:text-slate-400">Recompensa</p>
+                            <p class="text-base font-bold text-slate-900 dark:text-white">Bono de Ahorro</p>
+                            <p class="text-sm text-slate-600 dark:text-slate-400">Completa 3 desafíos de presupuesto
+                                para ganar un bono de ahorro del 5%.</p>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </div>
+        <footer
+            class="sticky bottom-0 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm border-t border-slate-200 dark:border-slate-800">
+            <nav class="flex justify-around p-2">
+                <a class="flex flex-col items-center justify-center gap-1 text-primary w-16" href="principal.html">
+                    <span class="material-symbols-outlined">home</span>
+                    <p class="text-xs font-medium">Inicio</p>
+                </a>
+                <a class="flex flex-col items-center justify-center gap-1 text-slate-600 dark:text-slate-400 hover:text-primary transition-colors w-16"
+                    href="registro.html">
+                    <span class="material-symbols-outlined">receipt_long</span>
+                    <p class="text-xs font-medium">Registros</p>
+                </a>
+                <a class="flex flex-col items-center justify-center gap-1 text-slate-600 dark:text-slate-400 hover:text-primary transition-colors w-16"
+                    href="metas.html">
+                    <span class="material-symbols-outlined">emoji_events</span>
+                    <p class="text-xs font-medium">Metas</p>
+                </a>
+                <a class="flex flex-col items-center justify-center gap-1 text-slate-600 dark:text-slate-400 hover:text-primary transition-colors w-16"
+                    href="comunidadForo.html">
+                    <span class="material-symbols-outlined">chat</span>
+                    <p class="text-xs font-medium">Chat</p>
+                </a>
+                <a class="flex flex-col items-center justify-center gap-1 text-slate-600 dark:text-slate-400 hover:text-primary transition-colors w-16"
+                    href="ofertas.html">
+                    <span class="material-symbols-outlined">percent</span>
+                    <p class="text-xs font-medium">Ofertas</p>
+                </a>
+            </nav>
+        </footer>
+    </div>
+
+</body>
+
+</html>
