@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html class="dark" lang="es">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FinanzApp - Login</title>
+
+  <!-- Google Fonts & Material Symbols -->
+  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?display=swap&family=Manrope:wght@400;500;700;800" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms"></script>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            primary: '#11a4d4',
+            'background-light': '#f6f8f8',
+            'background-dark': '#101d22',
+          },
+          fontFamily: {
+            display: ['Manrope'],
+          },
+          borderRadius: {
+            DEFAULT: '0.25rem',
+            lg: '0.5rem',
+            xl: '0.75rem',
+            full: '9999px',
+          },
+        },
+      },
+    }
+  </script>
+
+  <style>
+    body {
+      min-height: 100dvh;
+    }
+  </style>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark font-display text-gray-900 dark:text-white">
+  <div class="flex flex-col min-h-screen px-4 sm:px-6 lg:px-8">
+    <!-- Contenido principal -->
+    <main class="flex-grow flex flex-col justify-center items-center">
+      <!-- Logo y encabezado -->
+      <div class="w-full max-w-md space-y-6 text-center">
+        <div class="mx-auto flex h-16 w-16 items-center justify-center rounded-xl bg-primary/20 dark:bg-primary/30">
+          <span class="material-symbols-outlined text-primary text-4xl">savings</span>
+        </div>
+        <h1 class="text-3xl font-bold">FinanzApp</h1>
+        <p class="text-gray-600 dark:text-gray-400">
+          Inicia sesión para administrar tus finanzas personales.
+        </p>
+      </div>
+
+      <!-- Formulario -->
+      <div class="mt-10 w-full max-w-md">
+        <div class="space-y-4">
+          <input
+            class="form-input w-full h-14 rounded-lg border-gray-300 dark:border-gray-700 bg-background-light dark:bg-background-dark text-gray-900 dark:text-white placeholder-gray-400 dark:placeholder-gray-500 focus:ring-primary focus:border-primary"
+            placeholder="Usuario" />
+          <input type="password"
+            class="form-input w-full h-14 rounded-lg border-gray-300 dark:border-gray-700 bg-background-light dark:bg-background-dark text-gray-900 dark:text-white placeholder-gray-400 dark:placeholder-gray-500 focus:ring-primary focus:border-primary"
+            placeholder="Contraseña" />
+        </div>
+        <a href="principal.html">
+          <button
+            class="mt-6 w-full h-12 flex items-center justify-center rounded-lg bg-primary text-white text-base font-bold hover:bg-primary/90 transition">
+            Iniciar Sesión
+          </button>
+        </a>
+        <!-- Divider -->
+        <div class="relative mt-8 text-center">
+          <div aria-hidden="true" class="absolute inset-0 flex items-center">
+            <div class="w-full border-t border-gray-300 dark:border-gray-700"></div>
+          </div>
+          <div class="relative bg-background-light dark:bg-background-dark px-2 inline-block text-sm text-gray-500 dark:text-gray-400">
+            O inicia sesión con
+          </div>
+        </div>
+
+        <!-- Social Buttons -->
+        <div class="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <button
+            class="flex items-center justify-center gap-2 w-full h-12 px-4 rounded-lg bg-primary/10 dark:bg-primary/20 text-primary font-bold transition hover:bg-primary/20">
+            <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path clip-rule="evenodd"
+                d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"
+                fill-rule="evenodd"></path>
+            </svg>
+            <span>Facebook</span>
+          </button>
+          <button
+            class="flex items-center justify-center gap-2 w-full h-12 px-4 rounded-lg bg-primary/10 dark:bg-primary/20 text-primary font-bold transition hover:bg-primary/20">
+            <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                d="M12.0003 4.75C13.7703 4.75 15.3553 5.36002 16.6053 6.54998L19.5303 3.625C17.4753 1.68 14.9003 0.5 12.0003 0.5C7.49526 0.5 3.52526 3.44 1.76526 7.58498L4.81526 9.73498C5.59026 6.84 8.49526 4.75 12.0003 4.75Z"
+                fill="#EA4335"></path>
+              <path
+                d="M23.49 12.275C23.49 11.49 23.415 10.73 23.28 9.995H12V14.26H18.455C18.18 15.8 17.385 17.095 16.22 17.92L19.165 20.075C21.83 17.645 23.49 14.455 23.49 12.275Z"
+                fill="#4285F4"></path>
+              <path
+                d="M5.59013 14.265C5.34513 13.545 5.20013 12.78 5.20013 12C5.20013 11.22 5.34513 10.455 5.59013 9.73498L1.76514 7.58498C0.915138 9.26498 0.500138 11.08 0.500138 12C0.500138 12.92 0.915138 14.735 1.76514 16.415L5.59013 14.265Z"
+                fill="#FBBC05"></path>
+              <path
+                d="M12.0003 23.5C14.9003 23.5 17.4753 22.32 19.5303 20.075L16.6053 17.92C15.3553 18.64 13.7703 19.25 12.0003 19.25C8.49526 19.25 5.59026 17.16 4.81526 14.265L1.76526 16.415C3.52526 20.56 7.49526 23.5 12.0003 23.5Z"
+                fill="#34A853"></path>
+            </svg>
+            <span>Google</span>
+          </button>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="mt-12 pb-6 text-center">
+      <a href="#" class="text-sm text-primary hover:underline">
+        ¿No tienes cuenta? Regístrate
+      </a>
+    </footer>
+  </div>
+</body>
+
+</html>

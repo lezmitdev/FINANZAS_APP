@@ -3,15 +3,15 @@
 
 <head>
     <meta charset="utf-8" />
-    <title>Stitch Design</title>
-    <link href="data:image/x-icon;base64," rel="icon" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect" />
     <link as="style"
-        href="https://fonts.googleapis.com/css2?display=swap&amp;family=Manrope:wght@400;500;700;800&amp;family=Noto+Sans:wght@400;500;700;900"
+        href="https://fonts.googleapis.com/css2?display=swap&amp;family=Manrope%3Awght%40400%3B500%3B700%3B800&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900"
         onload="this.rel='stylesheet'" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <title>Stitch Design</title>
+    <link href="data:image/x-icon;base64," rel="icon" type="image/x-icon" />
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <script id="tailwind-config">
+    <script>
         tailwind.config = {
             darkMode: "class",
             theme: {
@@ -34,11 +34,7 @@
             },
         }
     </script>
-    <style>
-        body {
-            min-height: max(884px, 100dvh);
-        }
-    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
     <style>
         body {
             min-height: max(884px, 100dvh);
@@ -48,166 +44,236 @@
 
 <body class="bg-background-light dark:bg-background-dark font-display">
     <div class="relative flex h-auto min-h-screen w-full flex-col justify-between overflow-x-hidden">
-        <div>
-            <header class="flex items-center justify-between p-4 bg-background-light dark:bg-background-dark">
-                <button class="text-slate-800 dark:text-white">
+        <div class="flex-grow">
+            <header
+                class="flex items-center justify-between p-4 bg-background-light dark:bg-background-dark/80 backdrop-blur-sm sticky top-0 z-10">
+                <button class="text-slate-800 dark:text-slate-200">
+                    <span class="material-symbols-outlined">
+                        menu
+                    </span>
+                </button>
+                <h1 class="text-lg font-bold text-slate-900 dark:text-white flex-1 text-center">FinanzApp</h1>
+                <div class="w-8"></div>
+            </header>
+            <main class="flex-1 overflow-y-auto">
+                <div class="flex-1 overflow-y-auto pb-8">
+                    <div class="border-b border-slate-200 dark:border-slate-700">
+                        <div class="flex px-4 gap-8">
+                            <a class="flex flex-col items-center justify-center border-b-2 border-transparent text-slate-500 dark:text-slate-400 pb-3 pt-4"
+                                href="comunidadForo.html">
+                                <p class="text-sm font-bold">Foro</p>
+                            </a>
+                            <a class="flex flex-col items-center justify-center border-b-2 border-primary text-primary pb-3 pt-4"
+                                href="comunidadEventos.html">
+                                <p class="text-sm font-bold">Eventos</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <section class="space-y-4 px-4 pb-4">
+                    <h2 class="text-lg font-bold text-slate-900 dark:text-white mb-4">Próximos Eventos</h2>
+                    <div class="flex overflow-x-auto snap-x snap-mandatory pb-4 -mx-4 px-4">
+                        <div class="snap-center shrink-0 w-64 mr-4">
+                            <div class="rounded-lg shadow-md bg-white dark:bg-slate-800/50 overflow-hidden">
+                                <img alt="Charla sobre Inversiones Inteligentes" class="w-full h-32 object-cover"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuAAGYPz5uydr8pWOM-uG17pBNgSlwQQqUu3WGuFOV8r13aEnyWhRtBfP1oA0aYSJaQ7cTnPAAWk2suJDiyGyksOQGpHA1z8oZvslKmJKMk0CqJrQZyRB2q1qOm94wNOGy-_WG-z_TVp90GZPsZtEOAx3vrWwLGPfN-1noxnD-82MYgCMUa7R85jVZbooIDGPvhdy3SeHm9Yz9paQo6xYHobo8UCjo3H79JwLpebvywwf_RKk5TebhXJcyTNHxkGlhIG3DpMpf_7-ew" />
+                                <div class="p-4">
+                                    <h3 class="text-base font-bold text-slate-900 dark:text-white mb-2">Inversiones
+                                        Inteligentes</h3>
+                                    <p class="text-sm text-slate-600 dark:text-slate-400 mb-3 line-clamp-3">Descubre cómo
+                                        hacer crecer tu dinero con estrategias probadas. ¡No te lo pierdas!</p>
+                                    <button
+                                        class="w-full bg-primary text-white text-sm font-semibold py-2 px-4 rounded-lg hover:bg-primary/90 transition-colors">
+                                        Más información
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="snap-center shrink-0 w-64 mr-4">
+                            <div class="rounded-lg shadow-md bg-white dark:bg-slate-800/50 overflow-hidden">
+                                <img alt="Taller de Presupuesto Personal" class="w-full h-32 object-cover"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDS477cdSLvJVb3xHRqzhr-v38dOXw37QzVpTcUgy3rW4SZei9w5_D_zR5_pjZSHZuehwn33TZEqrQUSmw4b9wUPoGfAzJQVY91QF-bnr7DFhBAC3OmXLhTLqrSTJiEko2dp0lDkhZyFd-kx1nqwEO_BdzEJWGaot-98CdCx8sp-UGxBvyU6bbjk4aBDxUIt69HF6iVDld_BmDJVmgNsihVgeE30lYxqQg6CH8x43VzlpIBE61bxHKNCPoYIV1BDlqWTZLm5EsWYDc" />
+                                <div class="p-4">
+                                    <h3 class="text-base font-bold text-slate-900 dark:text-white mb-2">Taller de
+                                        Presupuesto</h3>
+                                    <p class="text-sm text-slate-600 dark:text-slate-400 mb-3 line-clamp-3">Aprende a
+                                        organizar tus finanzas y alcanzar tus metas con este taller práctico.</p>
+                                    <button
+                                        class="w-full bg-primary text-white text-sm font-semibold py-2 px-4 rounded-lg hover:bg-primary/90 transition-colors">
+                                        Más información
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="snap-center shrink-0 w-64 mr-4">
+                            <div class="rounded-lg shadow-md bg-white dark:bg-slate-800/50 overflow-hidden">
+                                <img alt="Seminario de Ahorro para el Futuro" class="w-full h-32 object-cover"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCWNaUkVcCnAaLXE6OihXvglwDz5F0KWQ0we7YNMVZX5oR7qwHe0b7sF-yTMIVv2-sayz2JG8oCtl-K7Qm6i96V-GvqXVbUjHvEAX2drsZdK3L-CxssmaSytYKHT0w8SC1JvbUCIE8-oxjKhkIm8sEOkmkxv11Eb-r7pu303scTeTKpU2ecE_cgJoyHFrAxwM_t5gVr-F8OirfM8odDiDgASp3V1oQHAIfUneXvcgQYnzFgMwsdsUM9_WGkRioD58ydvjN8A236UtY" />
+                                <div class="p-4">
+                                    <h3 class="text-base font-bold text-slate-900 dark:text-white mb-2">Ahorro para el
+                                        Futuro</h3>
+                                    <p class="text-sm text-slate-600 dark:text-slate-400 mb-3 line-clamp-3">Estrategias
+                                        clave para construir un fondo de emergencia y asegurar tu retiro.</p>
+                                    <button
+                                        class="w-full bg-primary text-white text-sm font-semibold py-2 px-4 rounded-lg hover:bg-primary/90 transition-colors">
+                                        Más información
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="snap-center shrink-0 w-64 mr-4">
+                            <div class="rounded-lg shadow-md bg-white dark:bg-slate-800/50 overflow-hidden">
+                                <img alt="Webinar de Criptomonedas para Principiantes" class="w-full h-32 object-cover"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuAyOCWNM4p5qh9s9Xtm54fvjsOVUTZ3pvOW_0BHHTMoG5rsog9uQ1fZclKUUNTvJnh3ODm120HP3Pl7JIQ4bdBDjtGeGpRPcL9hNTzD3wlCuuF1G-gmlmjBblilrNQxsgHcUnY6CfGCtdIgG1mJn0b7wI912K20IWH-8k16JxjdJ_961ygetwLaWqsObvSprZbuqplfkMXhG9W6FC8ZTjkXmaKHpZRqh7__eEsXGVExtDW8G0NCgzvSCguYeXbkj_lONMinsTd6sh4" />
+                                <div class="p-4">
+                                    <h3 class="text-base font-bold text-slate-900 dark:text-white mb-2">Criptomonedas para
+                                        Principiantes</h3>
+                                    <p class="text-sm text-slate-600 dark:text-slate-400 mb-3 line-clamp-3">Una introducción
+                                        sencilla al mundo de las criptomonedas y blockchain.</p>
+                                    <button
+                                        class="w-full bg-primary text-white text-sm font-semibold py-2 px-4 rounded-lg hover:bg-primary/90 transition-colors">
+                                        Más información
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="space-y-4 px-4 pb-8 mb-10">
+                    <h2 class="text-lg font-bold text-slate-900 dark:text-white mb-4">Eventos para tus metas financieras
+                    </h2>
+                        <div
+                            class="rounded-lg border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800/50 p-4">
+                            <div class="flex items-center justify-between mb-2">
+                                <h3 class="text-base font-bold text-slate-900 dark:text-white">Webinar: Planificación para
+                                    la Jubilación</h3>
+                                <span class="text-xs text-slate-500 dark:text-slate-400">15 de Nov</span>
+                            </div>
+                            <p class="text-sm text-slate-700 dark:text-slate-300 mb-3">Aprende a construir un fondo de
+                                jubilación sólido y seguro.</p>
+                            <div class="flex items-center gap-2 mb-3">
+                                <span class="material-symbols-outlined text-green-500 text-lg">check_circle</span>
+                                <p class="text-sm font-medium text-slate-700 dark:text-slate-300">Meta: Jubilación (80%
+                                    completada)</p>
+                            </div>
+                            <div class="w-full bg-slate-200 dark:bg-slate-700 rounded-full h-2 mb-4">
+                                <div class="bg-green-500 h-2 rounded-full" style="width: 80%;"></div>
+                            </div>
+                            <button
+                                class="w-full flex items-center justify-center gap-2 px-4 py-2 bg-primary text-white rounded-lg font-medium text-sm">
+                                <span class="material-symbols-outlined text-white text-lg">notifications_active</span>
+                                Recordarme
+                            </button>
+                        </div>
+                        <div
+                            class="rounded-lg border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800/50 p-4">
+                            <div class="flex items-center justify-between mb-2">
+                                <h3 class="text-base font-bold text-slate-900 dark:text-white">Taller: Estrategias para
+                                    Reducir Deudas</h3>
+                                <span class="text-xs text-slate-500 dark:text-slate-400">22 de Nov</span>
+                            </div>
+                            <p class="text-sm text-slate-700 dark:text-slate-300 mb-3">Descubre métodos efectivos para salir
+                                de deudas y mejorar tu salud financiera.</p>
+                            <div class="flex items-center gap-2 mb-3">
+                                <span class="material-symbols-outlined text-orange-500 text-lg">trending_up</span>
+                                <p class="text-sm font-medium text-slate-700 dark:text-slate-300">Meta: Reducción de Deudas
+                                    (45% completada)</p>
+                            </div>
+                            <div class="w-full bg-slate-200 dark:bg-slate-700 rounded-full h-2 mb-4">
+                                <div class="bg-orange-500 h-2 rounded-full" style="width: 45%;"></div>
+                            </div>
+                            <button
+                                class="w-full flex items-center justify-center gap-2 px-4 py-2 bg-primary text-white rounded-lg font-medium text-sm">
+                                <span class="material-symbols-outlined text-white text-lg">notifications_active</span>
+                                Recordarme
+                            </button>
+                        </div>
+                        <div
+                            class="rounded-lg border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800/50 p-4">
+                            <div class="flex items-center justify-between mb-2">
+                                <h3 class="text-base font-bold text-slate-900 dark:text-white">Charla: Primeros Pasos en
+                                    Inversiones</h3>
+                                <span class="text-xs text-slate-500 dark:text-slate-400">29 de Nov</span>
+                            </div>
+                            <p class="text-sm text-slate-700 dark:text-slate-300 mb-3">Inicia tu camino en el mundo de las
+                                inversiones con consejos prácticos para principiantes.</p>
+                            <div class="flex items-center gap-2 mb-3">
+                                <span class="material-symbols-outlined text-blue-500 text-lg">trending_up</span>
+                                <p class="text-sm font-medium text-slate-700 dark:text-slate-300">Meta: Ahorro para
+                                    Inversión (60% completada)</p>
+                            </div>
+                            <div class="w-full bg-slate-200 dark:bg-slate-700 rounded-full h-2 mb-4">
+                                <div class="bg-blue-500 h-2 rounded-full" style="width: 60%;"></div>
+                            </div>
+                            <button
+                                class="w-full flex items-center justify-center gap-2 px-4 py-2 bg-primary text-white rounded-lg font-medium text-sm">
+                                <span class="material-symbols-outlined text-white text-lg">notifications_active</span>
+                                Recordarme
+                            </button>
+                        </div>
+                </section> 
+            </main>
+
+        </div>
+        <footer>
+            <nav
+            class="fixed bottom-0 left-0 right-0 border-t border-white/10 bg-background-light/80 backdrop-blur-sm dark:bg-background-dark/80">
+            <div class="flex h-16 justify-around">
+                <a class="flex flex-1 flex-col items-center justify-center gap-1 text-gray-600 dark:text-gray-400"
+                    href="principal.html">
                     <svg fill="currentColor" height="24" viewBox="0 0 256 256" width="24"
                         xmlns="http://www.w3.org/2000/svg">
                         <path
-                            d="M224,128a8,8,0,0,1-8,8H40a8,8,0,0,1,0-16H216A8,8,0,0,1,224,128ZM40,72H216a8,8,0,0,0,0-16H40a8,8,0,0,0,0,16ZM216,184H40a8,8,0,0,0,0,16H216a8,8,0,0,0,0-16Z">
+                            d="M218.83,103.77l-80-75.48a1.14,1.14,0,0,1-.11-.11,16,16,0,0,0-21.53,0l-.11.11L37.17,103.77A16,16,0,0,0,32,115.55V208a16,16,0,0,0,16,16H96a16,16,0,0,0,16-16V160h32v48a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V115.55A16,16,0,0,0,218.83,103.77ZM208,208H160V160a16,16,0,0,0-16-16H112a16,16,0,0,0-16,16v48H48V115.55l.11-.1L128,40l79.9,75.43.11.1Z">
                         </path>
                     </svg>
-                </button>
-                <h1 class="text-lg font-bold text-slate-900 dark:text-white">Comunidad</h1>
-                <div class="w-6"></div>
-            </header>
-            <div class="border-b border-slate-200 dark:border-slate-700">
-                <div class="flex px-4 gap-8">
-                    <a class="flex flex-col items-center justify-center border-b-2 border-transparent text-slate-500 dark:text-slate-400 pb-3 pt-4"
-                        href="#">
-                        <p class="text-sm font-bold">Foro</p>
-                    </a>
-                    <a class="flex flex-col items-center justify-center border-b-2 border-primary text-primary pb-3 pt-4"
-                        href="#">
-                        <p class="text-sm font-bold">Eventos</p>
-                    </a>
-                </div>
-            </div>
-            <main class="p-4">
-                <h2 class="text-lg font-bold text-slate-900 dark:text-white mb-4">Eventos para tus metas financieras
-                </h2>
-                <div class="space-y-4">
-                    <div
-                        class="rounded-lg border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800/50 p-4">
-                        <div class="flex items-center justify-between mb-2">
-                            <h3 class="text-base font-bold text-slate-900 dark:text-white">Webinar: Planificación para
-                                la Jubilación</h3>
-                            <span class="text-xs text-slate-500 dark:text-slate-400">15 de Nov</span>
-                        </div>
-                        <p class="text-sm text-slate-700 dark:text-slate-300 mb-3">Aprende a construir un fondo de
-                            jubilación sólido y seguro.</p>
-                        <div class="flex items-center gap-2 mb-3">
-                            <span class="material-symbols-outlined text-green-500 text-lg">check_circle</span>
-                            <p class="text-sm font-medium text-slate-700 dark:text-slate-300">Meta: Jubilación (80%
-                                completada)</p>
-                        </div>
-                        <div class="w-full bg-slate-200 dark:bg-slate-700 rounded-full h-2 mb-4">
-                            <div class="bg-green-500 h-2 rounded-full" style="width: 80%;"></div>
-                        </div>
-                        <button
-                            class="w-full flex items-center justify-center gap-2 px-4 py-2 bg-primary text-white rounded-lg font-medium text-sm">
-                            <span class="material-symbols-outlined text-white text-lg">notifications_active</span>
-                            Recordarme
-                        </button>
-                    </div>
-                    <div
-                        class="rounded-lg border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800/50 p-4">
-                        <div class="flex items-center justify-between mb-2">
-                            <h3 class="text-base font-bold text-slate-900 dark:text-white">Taller: Estrategias para
-                                Reducir Deudas</h3>
-                            <span class="text-xs text-slate-500 dark:text-slate-400">22 de Nov</span>
-                        </div>
-                        <p class="text-sm text-slate-700 dark:text-slate-300 mb-3">Descubre métodos efectivos para salir
-                            de deudas y mejorar tu salud financiera.</p>
-                        <div class="flex items-center gap-2 mb-3">
-                            <span class="material-symbols-outlined text-orange-500 text-lg">trending_up</span>
-                            <p class="text-sm font-medium text-slate-700 dark:text-slate-300">Meta: Reducción de Deudas
-                                (45% completada)</p>
-                        </div>
-                        <div class="w-full bg-slate-200 dark:bg-slate-700 rounded-full h-2 mb-4">
-                            <div class="bg-orange-500 h-2 rounded-full" style="width: 45%;"></div>
-                        </div>
-                        <button
-                            class="w-full flex items-center justify-center gap-2 px-4 py-2 bg-primary text-white rounded-lg font-medium text-sm">
-                            <span class="material-symbols-outlined text-white text-lg">notifications_active</span>
-                            Recordarme
-                        </button>
-                    </div>
-                    <div
-                        class="rounded-lg border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800/50 p-4">
-                        <div class="flex items-center justify-between mb-2">
-                            <h3 class="text-base font-bold text-slate-900 dark:text-white">Charla: Primeros Pasos en
-                                Inversiones</h3>
-                            <span class="text-xs text-slate-500 dark:text-slate-400">29 de Nov</span>
-                        </div>
-                        <p class="text-sm text-slate-700 dark:text-slate-300 mb-3">Inicia tu camino en el mundo de las
-                            inversiones con consejos prácticos para principiantes.</p>
-                        <div class="flex items-center gap-2 mb-3">
-                            <span class="material-symbols-outlined text-blue-500 text-lg">trending_up</span>
-                            <p class="text-sm font-medium text-slate-700 dark:text-slate-300">Meta: Ahorro para
-                                Inversión (60% completada)</p>
-                        </div>
-                        <div class="w-full bg-slate-200 dark:bg-slate-700 rounded-full h-2 mb-4">
-                            <div class="bg-blue-500 h-2 rounded-full" style="width: 60%;"></div>
-                        </div>
-                        <button
-                            class="w-full flex items-center justify-center gap-2 px-4 py-2 bg-primary text-white rounded-lg font-medium text-sm">
-                            <span class="material-symbols-outlined text-white text-lg">notifications_active</span>
-                            Recordarme
-                        </button>
-                    </div>
-                </div>
-            </main>
-        </div>
-        <footer
-            class="sticky bottom-0 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm border-t border-slate-200 dark:border-slate-800">
-            <nav class="flex justify-around items-center px-4 pt-2 pb-3">
-                <a class="flex flex-col items-center justify-end gap-1 text-slate-500 dark:text-slate-400" href="#">
-                    <div class="flex h-8 items-center justify-center">
-                        <svg fill="currentColor" height="24" viewBox="0 0 256 256" width="24"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M224,115.55V208a16,16,0,0,1-16,16H168a16,16,0,0,1-16-16V168a8,8,0,0,0-8-8H112a8,8,0,0,0-8,8v40a16,16,0,0,1-16,16H48a16,16,0,0,1-16-16V115.55a16,16,0,0,1,5.17-11.78l80-75.48.11-.11a16,16,0,0,1,21.53,0,1.14,1.14,0,0,0,.11.11l80,75.48A16,16,0,0,1,224,115.55Z">
-                            </path>
-                        </svg>
-                    </div>
                     <p class="text-xs font-medium">Inicio</p>
                 </a>
-                <a class="flex flex-col items-center justify-end gap-1 text-slate-500 dark:text-slate-400" href="#">
-                    <div class="flex h-8 items-center justify-center">
-                        <svg fill="currentColor" height="24" viewBox="0 0 256 256" width="24"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M72,104a8,8,0,0,1,8-8h96a8,8,0,0,1,0,16H80A8,8,0,0,1,72,104Zm8,40h96a8,8,0,0,0,0-16H80a8,8,0,0,0,0,16ZM232,56V208a8,8,0,0,1-11.58,7.15L192,200.94l-28.42,14.21a8,8,0,0,1-7.16,0L128,200.94,99.58,215.15a8,8,0,0,1-7.16,0L64,200.94,35.58,215.15A8,8,0,0,1,24,208V56A16,16,0,0,1,40,40H216A16,16,0,0,1,232,56Zm-16,0H40V195.06l20.42-10.22a8,8,0,0,1,7.16,0L96,199.06l28.42-14.22a8,8,0,0,1,7.16,0L160,199.06l28.42-14.22a8,8,0,0,1,7.16,0L216,195.06Z">
-                            </path>
-                        </svg>
-                    </div>
+                <a class="flex flex-1 flex-col items-center justify-center gap-1 text-gray-600 dark:text-gray-400"
+                    href="registro.html">
+                    <svg fill="currentColor" height="24" viewBox="0 0 256 256" width="24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M72,104a8,8,0,0,1,8-8h96a8,8,0,0,1,0,16H80A8,8,0,0,1,72,104Zm8,40h96a8,8,0,0,0,0-16H80a8,8,0,0,0,0,16ZM232,56V208a8,8,0,0,1-11.58,7.15L192,200.94l-28.42,14.21a8,8,0,0,1-7.16,0L128,200.94,99.58,215.15a8,8,0,0,1-7.16,0L64,200.94,35.58,215.15A8,8,0,0,1,24,208V56A16,16,0,0,1,40,40H216A16,16,0,0,1,232,56Zm-16,0H40V195.06l20.42-10.22a8,8,0,0,1,7.16,0L96,199.06l28.42-14.22a8,8,0,0,1,7.16,0L160,199.06l28.42-14.22a8,8,0,0,1,7.16,0L216,195.06Z">
+                        </path>
+                    </svg>
                     <p class="text-xs font-medium">Registros</p>
                 </a>
-                <a class="flex flex-col items-center justify-end gap-1 text-primary" href="#">
-                    <div class="flex h-8 items-center justify-center">
+                <a class="flex flex-1 flex-col items-center justify-center gap-1 text-gray-600 dark:text-gray-400" href="metas.html">
+                    <!--<div class="rounded-full bg-primary/20 p-3">-->
                         <svg fill="currentColor" height="24" viewBox="0 0 256 256" width="24"
                             xmlns="http://www.w3.org/2000/svg">
                             <path
-                                d="M221.87,83.16A104.1,104.1,0,1,1,195.67,49l22.67-22.68a8,8,0,0,1,11.32,11.32l-96,96a8,8,0,0,1-11.32-11.32l27.72-27.72a40,40,0,1,0,17.87,31.09,8,8,0,1,1,16-.9,56,56,0,1,1-22.38-41.65L184.3,60.39a87.88,87.88,0,1,0,23.13,29.67,8,8,0,0,1,14.44-6.9Z">
+                                d="M232,64H208V56a16,16,0,0,0-16-16H64A16,16,0,0,0,48,56v8H24A16,16,0,0,0,8,80V96a40,40,0,0,0,40,40h3.65A80.13,80.13,0,0,0,120,191.61V216H96a8,8,0,0,0,0,16h64a8,8,0,0,0,0-16H136V191.58c31.94-3.23,58.44-25.64,68.08-55.58H208a40,40,0,0,0,40-40V80A16,16,0,0,0,232,64ZM48,120A24,24,0,0,1,24,96V80H48v32q0,4,.39,8ZM232,96a24,24,0,0,1-24,24h-.5a81.81,81.81,0,0,0,.5-8.9V80h24Z">
                             </path>
                         </svg>
-                    </div>
+                    <!--</div>-->
                     <p class="text-xs font-medium">Metas</p>
                 </a>
-                <a class="flex flex-col items-center justify-end gap-1 text-slate-500 dark:text-slate-400" href="comunidadForo.html">
-                    <div class="flex h-8 items-center justify-center">
-                        <svg fill="currentColor" height="24" viewBox="0 0 256 256" width="24"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M140,128a12,12,0,1,1-12-12A12,12,0,0,1,140,128ZM84,116a12,12,0,1,0,12,12A12,12,0,0,0,84,116Zm88,0a12,12,0,1,0,12,12A12,12,0,0,0,172,116Zm60,12A104,104,0,0,1,79.12,219.82L45.07,231.17a16,16,0,0,1-20.24-20.24l11.35-34.05A104,104,0,1,1,232,128Zm-16,0A88,88,0,1,0,51.81,172.06a8,8,0,0,1,.66,6.54L40,216,77.4,203.53a7.85,7.85,0,0,1,2.53-.42,8,8,0,0,1,4,1.08A88,88,0,0,0,216,128Z">
-                            </path>
-                        </svg>
+                <a class="flex flex-1 flex-col items-center justify-center gap-1 text-primary "
+                    href="comunidadForo.html">
+                    <div class="rounded-full bg-primary/20 p-3">
+                    <svg fill="currentColor" height="24" viewBox="0 0 256 256" width="24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M140,128a12,12,0,1,1-12-12A12,12,0,0,1,140,128ZM84,116a12,12,0,1,0,12,12A12,12,0,0,0,84,116Zm88,0a12,12,0,1,0,12,12A12,12,0,0,0,172,116Zm60,12A104,104,0,0,1,79.12,219.82L45.07,231.17a16,16,0,0,1-20.24-20.24l11.35-34.05A104,104,0,1,1,232,128Zm-16,0A88,88,0,1,0,51.81,172.06a8,8,0,0,1,.66,6.54L40,216,77.4,203.53a7.85,7.85,0,0,1,2.53-.42,8,8,0,0,1,4,1.08A88,88,0,0,0,216,128Z">
+                        </path>
+                    </svg>
                     </div>
                     <p class="text-xs font-medium">Comunidad</p>
                 </a>
-                <a class="flex flex-col items-center justify-end gap-1 text-slate-500 dark:text-slate-400" href="#">
-                    <div class="flex h-8 items-center justify-center">
-                        <svg fill="currentColor" height="24" viewBox="0 0 256 256" width="24"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M205.66,61.64l-144,144a8,8,0,0,1-11.32-11.32l144-144a8,8,0,0,1,11.32,11.31ZM50.54,101.44a36,36,0,0,1,50.92-50.91h0a36,36,0,0,1-50.92,50.91ZM56,76A20,20,0,1,0,90.14,61.84h0A20,20,0,0,0,56,76ZM216,180a36,36,0,1,1-10.54-25.46h0A35.76,35.76,0,0,1,216,180Zm-16,0a20,20,0,1,0-5.86,14.14A19.87,19.87,0,0,0,200,180Z">
-                            </path>
-                        </svg>
-                    </div>
+                <a class="flex flex-1 flex-col items-center justify-center gap-1 text-gray-600 dark:text-gray-400"
+                    href="ofertas.html">
+                    <svg fill="currentColor" height="24" viewBox="0 0 256 256" width="24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M205.66,61.64l-144,144a8,8,0,0,1-11.32-11.32l144-144a8,8,0,0,1,11.32,11.31ZM50.54,101.44a36,36,0,0,1,50.92-50.91h0a36,36,0,0,1-50.92,50.91ZM56,76A20,20,0,1,0,90.14,61.84h0A20,20,0,0,0,56,76ZM216,180a36,36,0,1,1-10.54-25.46h0A35.76,35.76,0,0,1,216,180Zm-16,0a20,20,0,1,0-5.86,14.14A19.87,19.87,0,0,0,200,180Z">
+                        </path>
+                    </svg>
                     <p class="text-xs font-medium">Ofertas</p>
                 </a>
-            </nav>
+            </div>
+        </nav>
         </footer>
     </div>
 

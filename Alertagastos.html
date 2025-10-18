@@ -22,6 +22,8 @@
               'gamified-primary': '#4ade80',
               'gamified-secondary': '#a78bfa',
               'gamified-text': '#e2e8f0',
+              'emergency-red': '#dc2626',
+              'emergency-orange': '#ea580c',
             },
             fontFamily: {
               display: ["Manrope"],
@@ -91,7 +93,7 @@
                 <div class="shadow-inner rounded-xl bg-gray-100 p-4 dark:bg-gray-800">
                     <div class="mb-3 flex items-center justify-between">
                         <div class="text-lg font-semibold text-gray-900 dark:text-white">
-                            <a href="metas.html">Nivel Financiero: Aventurero </a>
+                            Nivel Financiero: Aventurero
                         </div>
                         <div class="flex items-center font-bold text-primary">
                             <span>75%</span>
@@ -143,7 +145,7 @@
                         </p>
                     </div>
                     <div class="rounded-lg bg-ring-gastos/20 p-2 text-center">
-                        <a href="Alertagastos.html"><p class="text-sm text-gray-600 dark:text-gray-300">Gastos</p></a>
+                        <p class="text-sm text-gray-600 dark:text-gray-300">Gastos</p>
                         <p class="text-base font-bold text-gray-900 dark:text-white">
                             S/ 8,200
                         </p>
@@ -155,7 +157,32 @@
                         </p>
                     </div>
                 </div>
-
+                <!--<div class="space-y-4">
+                    <h2 class="text-lg font-bold text-gray-900 dark:text-white">
+                                Tipo de Cambio
+                                </h2>
+                    <div class="flex items-center justify-between rounded-lg bg-gray-100 p-4 dark:bg-background-dark/50">
+                        <div class="flex items-center gap-4">
+                            <div class="flex h-12 w-12 items-center justify-center rounded-full bg-primary/20 text-primary dark:bg-primary/30">
+                            <span class="material-symbols-outlined"> attach_money </span>
+                            </div>
+                            <div>
+                                <p class="font-semibold text-gray-800 dark:text-gray-200">
+                                    Dólar Americano
+                                </p>
+                                <p class="text-sm text-gray-500 dark:text-gray-400">
+                                    1 USD = S/ 3.75
+                                </p>
+                            </div>
+                        </div>
+                        <button class="flex items-center gap-2 rounded-full bg-primary px-4 py-2 text-sm font-bold text-white">
+                        <span>Cambiar</span>
+                        <span class="material-symbols-outlined text-base">
+                            sync_alt
+                        </span>
+                        </button>
+                    </div>
+                </div>-->
                 <div class="relative flex justify-end">
                     <div class="flex items-center gap-3 rounded-full bg-primary/20 dark:bg-primary/30 p-3 pr-4 shadow-lg">
                         <img alt="Virtual assistant" class="h-10 w-10 rounded-full object-cover border-2 border-primary" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC4K3xrjCZL1k6OSPrPGTvmJIYyxY2JyfGlvzlm1sCfabnwymEDiy_eS0B2r3g2DPNvIO6dpFbKM7llgW_NuSVMZWf-MyKWnvt5erJv0GO76iM125T0jTk5z1HWgJ6z5NnIDlVkl_Th1s4I8kxKQTwcZ4DJTes-uZzxYby4Opnz7W2531sFoyaXGKoQ3KrJf3dqeLFbUz4n5nm__GgsSG9rwQucm6DJAnsgzXGIJiH8jP1FXt70YFF8W4mA0TUsrvmvNbuJl4DmH1Y"/>
@@ -163,7 +190,9 @@
                     </div>
                 </div>
                 <div class="space-y-4">
-
+                    <!--<h2 class="text-lg font-bold text-gray-900 dark:text-white">
+                                Tipo de Cambio
+                                </h2>-->
                     <div class="flex items-center justify-between rounded-lg bg-gray-100 p-4 dark:bg-background-dark/50">
                         <div class="flex items-center gap-4">
                             <div class="flex h-12 w-12 items-center justify-center rounded-full bg-primary/20 text-primary dark:bg-primary/30">
@@ -247,60 +276,54 @@
                         <p class="text-xs font-medium">Ofertas</p>
                     </a>
                 </div>
-            </nav>
-        <!--<div class="fixed inset-0 z-50 hidden overflow-hidden bg-gamified-bg p-4 text-gamified-text animate-bounce-in" id="gamified-guide-popup">
-            <div class="relative flex h-full flex-col items-center justify-center">
-                <button class="absolute right-4 top-4 text-3xl text-gray-400 hover:text-white" id="close-gamified-guide">
+            </nav>        
+    </div>
+    <div id="conversational-analyst"class="fixed inset-0 z-50 flex items-end justify-center bg-black bg-opacity-75 p-4 md:items-center hidden">
+        <div
+            class="relative w-full max-w-sm overflow-hidden rounded-t-xl bg-background-light dark:bg-background-dark shadow-lg md:rounded-xl">
+            <div class="absolute inset-0 bg-gradient-to-t from-emergency-red to-emergency-orange opacity-10"></div>
+            <div class="relative p-6 text-center">
+                <div class="mb-4 flex justify-center text-emergency-red dark:text-emergency-orange">
+                    <span class="material-symbols-outlined text-6xl"> warning </span>
+                </div>
+                <h2 class="mb-2 text-2xl font-bold text-gray-900 dark:text-white">¡Alerta de Gasto!</h2>
+                <p class="mb-6 text-gray-700 dark:text-gray-300">
+                    Hemos detectado que tus gastos mensuales están muy cerca de exceder tu presupuesto.
+                </p>
+                <div class="space-y-3">
+                    <button
+                        class="w-full rounded-lg bg-emergency-red px-5 py-3 text-lg font-bold text-white shadow-md transition-colors duration-200 hover:bg-emergency-orange">
+                        Ver Sugerencias Urgentes
+                    </button>
+                    <button
+                        class="w-full rounded-lg bg-gray-200 px-5 py-3 text-lg font-bold text-gray-800 shadow-md transition-colors duration-200 hover:bg-gray-300 dark:bg-gray-700 dark:text-white dark:hover:bg-gray-600">
+                        Establecer Límite de Gasto
+                    </button>
+                </div>
+                <button onclick="document.getElementById('conversational-analyst').classList.add('hidden');"
+                    class="absolute right-4 top-4 text-gray-600 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200">
                     <span class="material-symbols-outlined"> close </span>
                 </button>
-                <div class="relative mb-8 h-48 w-48 rounded-full bg-gradient-to-br from-gamified-primary to-gamified-secondary p-2 shadow-lg animate-character-float">
-                    <div class="flex h-full w-full items-center justify-center rounded-full bg-gamified-bg/70 text-6xl">
-                                ✨
-                    </div>
-                    <div class="absolute -right-2 top-4 animate-sparkle">
-                        <span class="material-symbols-outlined text-4xl text-yellow-300">auto_awesome</span>
-                    </div>
-                    <div class="absolute -left-2 bottom-4 animate-sparkle delay-500">
-                        <span class="material-symbols-outlined text-3xl text-purple-300">star</span>
-                    </div>
-                </div>
-                <h2 class="mb-4 text-center text-3xl font-bold text-gamified-primary">
-                    ¡Bienvenido a la Búsqueda Financiera!
-                </h2>
-                <p class="mb-8 text-center text-lg text-gamified-text/80">
-                    Soy tu guía personal. ¡Vamos a conquistar tus finanzas con divertidos
-                    desafíos!
-                </p>
-                <div class="w-full max-w-md space-y-4">
-                    <button class="w-full animate-pulse-scale rounded-xl bg-gamified-primary/20 px-6 py-4 text-xl font-bold text-gamified-primary shadow-lg transition-colors duration-200 hover:bg-gamified-primary/30">
-                        <span class="material-symbols-outlined align-middle text-3xl">account_balance_wallet</span>
-                            Desafío de Ingresos
-                    </button>
-                    <button class="w-full animate-pulse-scale rounded-xl bg-gamified-secondary/20 px-6 py-4 text-xl font-bold text-gamified-secondary shadow-lg transition-colors duration-200 hover:bg-gamified-secondary/30">
-                        <span class="material-symbols-outlined align-middle text-3xl">shopping_cart</span>
-                            Mini-Juego de Gastos
-                    </button>
-                    <button class="w-full animate-pulse-scale rounded-xl bg-blue-400/20 px-6 py-4 text-xl font-bold text-blue-400 shadow-lg transition-colors duration-200 hover:bg-blue-400/30">
-                        <span class="material-symbols-outlined align-middle text-3xl">savings</span>
-                            Misión de Ahorros
-                    </button>
-                </div>
             </div>
-        </div>-->
-        
+        </div>
     </div>
     <script>
-      const openButton = document.getElementById('open-gamified-guide');
-      const closeButton = document.getElementById('close-gamified-guide');
-      const popup = document.getElementById('gamified-guide-popup');
-      openButton.addEventListener('click', () => {
-        popup.classList.remove('hidden');
-        document.body.classList.add('overflow-hidden'); // Prevent scrolling body
-      });
-      closeButton.addEventListener('click', () => {
+      //const openButton = document.getElementById('open-gamified-guide');
+      //const closeButton = document.getElementById('close-gamified-guide');
+      //const popup = document.getElementById('gamified-guide-popup');
+      //openButton.addEventListener('click', () => {
+        //popup.classList.remove('hidden');
+        //document.body.classList.add('overflow-hidden'); // Prevent scrolling body
+      //});
+     /*document.addEventListener('click', () => {
         popup.classList.add('hidden');
         document.body.classList.remove('overflow-hidden'); // Restore body scrolling
-      });
+        // });*/
+        document.addEventListener('DOMContentLoaded', () => {
+            // Show the conversational analyst pop-up immediately on load
+            document.getElementById('conversational-analyst').classList.remove('hidden');
+        });
+      
     </script>
 
 </body></html>

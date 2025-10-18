@@ -58,16 +58,39 @@
     <!-- Contenido principal -->
     <main class="flex-grow flex flex-col justify-center items-center">
       <!-- Logo y encabezado -->
-      <div class="w-full max-w-md space-y-6 text-center mb-8">
+      <div class="w-full max-w-md space-y-6 text-center">
         <div class="mx-auto flex h-16 w-16 items-center justify-center rounded-xl bg-primary/20 dark:bg-primary/30">
-          <a href="inicio2.html"><span class="material-symbols-outlined text-primary text-4xl">savings</span></a>
+          <span class="material-symbols-outlined text-primary text-4xl">savings</span>
+        </div>
+        <h1 class="text-3xl font-bold">FinanzApp</h1>
+      </div>
+
+      <!-- Formulario -->
+      <div class="mt-10 w-full max-w-md">
+        <a href="inicio3.html">
+          <button
+            class="mt-6 w-full h-12 flex items-center justify-center rounded-lg bg-primary text-white text-base font-bold hover:bg-primary/90 transition">
+            Online
+          </button>
+        </a>
+        <!-- Social Buttons -->
+        <div class="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <a href="inicio3.html">
+            <button
+              class="flex items-center justify-center gap-2 w-full h-12 px-4 rounded-lg bg-primary/10 dark:bg-primary/20 text-primary font-bold transition hover:bg-primary/20">
+              <span>Offline</span>
+            </button>
+          </a>
         </div>
       </div>
-      
-            <h1 class="text-4xl font-bold text-primary">FinanzApp</h1>
-            <p class="mt-2 text-lg text-black/60 dark:text-white/60">Tu app de finanzas personales.</p>
- 
     </main>
+
+    <!-- Footer -->
+    <footer class="mt-12 pb-6 text-center">
+        <p class="text-xs text-gray-500 dark:text-gray-400 text-center">
+                Continua, si estas de acuerdo con nuestros <a class="font-medium text-primary hover:underline" href="#">Terminos de Servicios</a> y <a class="font-medium text-primary hover:underline" href="#">Politica de privacidad</a>.
+        </p>
+    </footer>
   </div>
 </body>
 
